@@ -18,7 +18,6 @@ const Greeting = ({ currentUser, logout }) => {
       <button className="header-button" onClick={logout}>Log Out</button>
     </hgroup>
   );
-    debugger
   return currentUser ? personalGreeting() : sessionLinks();
 };
 

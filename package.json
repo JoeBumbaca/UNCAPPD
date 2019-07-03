@@ -25,7 +25,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack -w --mode=development"
+    "start": "webpack -w --mode=development",
+    "postinstall": "webpack"
   },
   "repository": {
     "type": "git",
@@ -40,5 +41,9 @@
   "homepage": "https://github.com/JoeBumbaca/UNCAPPD#readme",
   "devDependencies": {
     "webpack-cli": "^3.3.5"
+  },
+  "engines": {
+    "node": "10.13.0",
+    "npm": "6.4.1"
   }
 }
