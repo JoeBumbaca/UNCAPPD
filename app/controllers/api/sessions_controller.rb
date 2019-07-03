@@ -1,8 +1,4 @@
-class SessionsController < ApplicationController
-
-  def new
-    render :new
-  end
+class Api::SessionsController < ApplicationController
 
   def create
     @user = User.find_by_credentials(params[:user][:username], params[:user][:password])
@@ -16,7 +12,7 @@ class SessionsController < ApplicationController
 
   def destroy
     logout
-    redirect_to new_session_url
+    render {}
   end
 
 end

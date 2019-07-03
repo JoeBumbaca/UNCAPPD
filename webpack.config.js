@@ -2,7 +2,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: './frontend/entry.jsx',
+  entry: './frontend/uncappd.jsx',
   output: {
     path: path.resolve(__dirname, 'app', 'assets', 'javascripts'), // NEW
     filename: './bundle.js'
