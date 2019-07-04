@@ -20,12 +20,16 @@ const receiveErrors = errors => ({
 
 export const createNewUser = formUser => dispatch => (
   APIUtil.signup(formUser)
-    .then(user => dispatch(receiveCurrentUser(user)))
+    .then(user => dispatch(receiveCurrentUser(user)), 
+    err => (dispatch(receiveErrors(err.responseJSON))
+    ))
 );
 
 export const login = formUser => dispatch => (
   APIUtil.login(formUser)
-    .then(user => dispatch(receiveCurrentUser(user)))
+    .then(user => dispatch(receiveCurrentUser(user)),
+    err => (dispatch(receiveErrors(err.responseJSON))
+    ))
 );
 
 export const logout = () => dispatch => (
