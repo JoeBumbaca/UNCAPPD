@@ -8,9 +8,9 @@ const Greeting = ({ currentUser, logout }) => {
   const sessionLinks = () => (
     <div className="splash-nav-bar">
       <nav className="login-signup">
-        <Link to="/login">SIGN IN</Link>
+        <Link to="/login" className="signin">SIGN IN</Link>
         &nbsp;&nbsp;
-        <Link to="/signup">CREATE AN ACCOUNT</Link>
+        <Link to="/signup" className="signup">CREATE AN ACCOUNT</Link>
       </nav>
     </div>
   );
