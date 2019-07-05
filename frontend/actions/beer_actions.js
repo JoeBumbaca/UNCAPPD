@@ -21,14 +21,15 @@ const receiveErrors = errors => ({
 
 export const createBeer = formBeer => dispatch => (
   APIUtil.create(formBeer)
-  .then( beer => dispatch(receiveBeer(beer)),
-  err => (dispatch(receiveErrors(err.responseJSON))
-  ))
+  .then( beer => dispatch(receiveBeer(beer)))
 );
 
 export const fetchBeer = id => dispatch => (
   APIUtil.fetchBeer(id)
-  .then( beer => dispatch(receiveBeer(beer)),
-  err => (dispatch(receiveErrors(err.responseJSON))
-  ))
+  .then( beer => dispatch(receiveBeer(beer)))
+);
+
+export const fetchBeers = () => dispatch => (
+  APIUtil.fetchBeers()
+  .then(beers => dispatch(receiveBeers(beers)))
 );

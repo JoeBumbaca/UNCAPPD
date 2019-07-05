@@ -8,10 +8,11 @@ export const create = (beer) => (
   })
 );
 
-export const fetchBeers = () => (
+export const fetchBeers = data => (
   $.ajax({
     method: "GET",
     url: "/api/beers",
+    data
   })
 );
 
