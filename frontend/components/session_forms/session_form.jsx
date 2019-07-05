@@ -98,7 +98,7 @@ class SessionForm extends React.Component {
               </div>
             <br />
             <div className="signup-email">
-                <i class="fas fa-envelope"></i>
+                <i className="fas fa-envelope"></i>
             <label>
               <input type="text"
                 value={this.state.email}
