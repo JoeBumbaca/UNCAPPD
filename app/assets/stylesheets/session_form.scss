@@ -11,3 +11,83 @@
   background-color: white;
   margin: auto;
 }
+
+.login-title {
+  color: rgb(49, 49, 49);
+  margin-left: 70px;
+  font-size: 45px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.login-subtitle {
+  color: darkgray;
+  margin-left: 130px;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.login-input {
+  margin-left: 5px;
+  width: 210px;
+  height: 25px;
+  background-color:rgb(233, 240, 254);
+}
+
+.login-form {
+  margin-left: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.session-submit {
+  background-color: rgb(255, 192, 4);
+  width: 252px;
+  height: 40px;
+  margin-right: 40px;
+  color: white;
+  font-size: 16px;
+  border-radius: 3px;
+}
+
+.session-submit:hover {
+  filter: brightness(85%);
+}
+
+.login-username {
+  border: 1px solid lightgray;
+  margin-right: 57px;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.login-password {
+  border: 1px solid lightgray;
+  margin-right: 57px;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.grey-div {
+  height: 1px;
+  width: 200px;
+  background-color: lightgray;
+  margin-left: 85px;
+  margin-top: 20px;
+}
+
+.login-text {
+  color: grey;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 75px;
+}
+
+.login-link {
+  margin-left: 20px;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+

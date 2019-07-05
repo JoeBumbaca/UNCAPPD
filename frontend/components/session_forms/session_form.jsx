@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -82,31 +83,51 @@ class SessionForm extends React.Component {
       return (
         <div className="form-main">
         <div className="login-form-container">
+          <div className="login-title">
+            UNCAPPD
+          </div>
+            <div className="login-subtitle">
+              DRINK SOCIALLY
+          </div>
           <form onSubmit={this.handleSubmit} className="login-form-box">
             <br />
             {this.renderErrors()}
             <div className="login-form">
               <br />
-              <label>Username:
+              <label>
+                <div className="login-username">
+                  <i className="fas fa-user"></i>
               <input type="text"
                   value={this.state.username}
                   onChange={this.update('username')}
                   className="login-input"
                   placeholder="Username"
                 />
+                </div>
               </label>
               <br />
-              <label>Password:
+              <label>
+                <div className="login-password">
+                  <i className="fas fa-lock"></i>
               <input type="password"
                   value={this.state.password}
                   onChange={this.update('password')}
                   className="login-input"
                   placeholder="Password"
                 />
+                  </div>
               </label>
               <br />
               <input className="session-submit" type="submit" value={this.props.formType} />
             </div>
+              <div className="grey-div"></div>
+              <div className="login-bottom">
+              <div className="login-text">New around here?
+              <span className="login-link">
+                  <Link to="/signup" className="signup-link">Sign up!</Link>
+              </span>
+              </div>
+              </div>
           </form>
           </div>
         </div>
