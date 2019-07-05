@@ -10,6 +10,11 @@ class SessionForm extends React.Component {
       email: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
+  }
+
+  componentWillMount() {
+    this.props.clearErrors();
   }
 
   update(field) {
@@ -24,11 +29,20 @@ class SessionForm extends React.Component {
     this.props.processForm(user);
   }
 
+  handleDemo(e) {
+    e.preventDefault();
+    this.state = {
+      username: "ipaLover42",
+      password: "hunter12"
+    };
+    this.props.demoUser(this.state);
+  }
+
   renderErrors() {
     return (
       <ul>
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
+          <li className="errors" key={`error-${i}`}>
             {error}
           </li>
         ))}
@@ -41,40 +55,68 @@ class SessionForm extends React.Component {
     return (
       <div className="form-main">
       <div className="signup-form-container">
+          <div className="signup-title">
+            UNCAPPD
+          </div>
+          <div className="signup-subtitle">
+            DRINK SOCIALLY
+          </div>
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <br />
           {this.renderErrors()}
           <div className="login-form">
             <br />
-            <label>Username:
+            <div className="required">
+              All fields below are required.
+            </div>
+            <div className="signup-username">
+                <i className="fas fa-user"></i>
+            <label>
               <input type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
-                className="login-input"
+                className="signup-input"
                 placeholder="Username"
               />
             </label>
+              </div>
+              <br />
+              <div className="safety">
+              Be safe!  Avoid common words and include a mix of letters and numbers.
+              </div>
             <br />
-            <label>Password:
+            <div className="signup-password">
+                <i className="fas fa-lock"></i>
+            <label>
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
-                className="login-input"
+                className="signup-input"
                 placeholder="Password"
               />
             </label>
+              </div>
             <br />
-            <label>Email:
+            <div className="signup-email">
+                <i class="fas fa-envelope"></i>
+            <label>
               <input type="text"
                 value={this.state.email}
                 onChange={this.update('email')}
-                className="login-input"
+                className="signup-input"
                 placeholder="Email"
               />
             </label>
+              </div>
+              <div className="disclaimer">
+                You must be of legal drinking age in your country to join Untappd. 
+                By clicking Create Account, you agree to our Terms of Use and our Privacy Policy
+              </div>
             <br />
             <input className="session-submit" type="submit" value={this.props.formType} />
           </div>
+          <br />
+            <input className="signup-demo-user" type="submit" onClick={this.handleDemo} value="Demo Log In" />
         </form>
       </div>
     </div>
@@ -117,8 +159,9 @@ class SessionForm extends React.Component {
                 />
                   </div>
               </label>
-              <br />
               <input className="session-submit" type="submit" value={this.props.formType} />
+              <br />
+                <input className="demo-user" type="submit" onClick={this.handleDemo} value="Demo Log In" />
             </div>
               <div className="grey-div"></div>
               <div className="login-bottom">

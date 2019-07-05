@@ -6,7 +6,7 @@
   background-image: linear-gradient(rgba(0,0,0, .75), rgba(0,0,0, .75)), url("../../../assets/images/Fort-Point-Beer-Golden-Gate-Bridge21-550x364.jpg")
 }
 .login-form-container {
-  height: 400px;
+  height: 450px;
   width: 375px;
   background-color: white;
   margin: auto;
@@ -47,6 +47,7 @@
   width: 252px;
   height: 40px;
   margin-right: 40px;
+  margin-top: 15px;
   color: white;
   font-size: 16px;
   border-radius: 3px;
@@ -91,3 +92,105 @@
   text-decoration: none;
 }
 
+.signup-form-container {
+  height: 625px;
+  width: 400px;
+  background-color: white;
+  margin: auto;
+}
+
+.signup-title {
+  color: rgb(49, 49, 49);
+  margin-left: 90px;
+  font-size: 45px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.signup-subtitle {
+  color: darkgray;
+  margin-left: 145px;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.disclaimer {
+  margin-top: 3px;
+  font-size: 9px;
+  margin-right: 70px;
+}
+
+.safety {
+  font-size: 12px;
+  margin-right: 70px;
+}
+
+.required {
+  font-size: 12px;
+  margin-left: 55px;
+}
+
+.demo-user {
+  background-color: blue;
+  width: 252px;
+  height: 40px;
+  margin-right: 40px;
+  color: white;
+  font-size: 16px;
+  border-radius: 3px;
+}
+
+.demo-user:hover {
+  filter: brightness(65%);
+  cursor: pointer;
+}
+
+
+.signup-demo-user {
+  background-color: blue;
+  width: 252px;
+  height: 40px;
+  margin-top: 5px;
+  margin-left: 65px;
+  color: white;
+  font-size: 16px;
+  border-radius: 3px;
+}
+
+.signup-demo-user:hover {
+  filter: brightness(85%);
+  cursor: pointer;
+}
+
+.signup-password {
+  border: 1px solid lightgray;
+  margin-right: 80px;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.signup-username {
+  border: 1px solid lightgray;
+  margin-right: 80px;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.signup-email {
+  border: 1px solid lightgray;
+  margin-right: 80px;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.signup-input {
+  margin-left: 5px;
+  width: 210px;
+  height: 25px;
+}
+
+.errors {
+  color: red;
+  margin-left: 55px;
+}
