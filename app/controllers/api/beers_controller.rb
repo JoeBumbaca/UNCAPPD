@@ -20,12 +20,8 @@ class Api::BeersController < ApplicationController
     render :index
   end
 
-  def edit
-
-  end
-
   def update
-
+    @beer = Beer.find(params[:id])
   end
 
   def destroy
