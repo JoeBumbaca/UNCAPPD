@@ -27,9 +27,19 @@ render() {
   return (
     <div>
       <NavContainer />
-      <ul>
-        {beers}
-      </ul>
+      <div className="index-main">
+        <div className="index-form-main">
+          <div className="index-form-header">
+            <div className="index-title">Beers</div>
+            <button className="add">Add A Beer</button>
+          </div>
+            <div className="index-div"></div>
+          <ul>
+            {beers}
+          </ul>
+        </div>
+      </div>
+
     </div>
   );
 };
