@@ -6,8 +6,6 @@ import NavContainer from '../nav/nav_container';
 class BeerIndex extends React.Component {
   constructor(props) {
     super(props);
-
-    this.currentUser = this.props.currentUser
   }
 
 
@@ -37,7 +35,7 @@ render() {
           </div>
             <div className="index-div"></div>
           <ul>
-            {beers}
+            { beers }
           </ul>
         </div>
       </div>

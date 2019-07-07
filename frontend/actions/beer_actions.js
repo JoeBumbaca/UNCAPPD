@@ -19,6 +19,10 @@ const receiveErrors = errors => ({
   errors
 });
 
+export const removeErrors = () => ({
+  type: REMOVE_ERRORS,
+});
+
 export const createBeer = formBeer => dispatch => (
   APIUtil.create(formBeer)
   .then( beer => dispatch(receiveBeer(beer)))
