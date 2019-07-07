@@ -4,8 +4,9 @@ import BeerIndex from './beer_index'
 import { fetchBeers } from '../../actions/beer_actions';
 
 const mapStateToProps = (state) => {
+  let beersArr = Object.values(state.entities.beers)
   return {
-    beers : state.beers
+    beers : beersArr
   }
 }
 

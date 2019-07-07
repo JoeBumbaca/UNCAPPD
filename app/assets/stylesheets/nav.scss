@@ -1,0 +1,59 @@
+.nav-bar {
+  height: 50px;
+  background-color: rgb(255, 205, 1);
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-logo {
+  height: 100%;
+   margin: 10px;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.user-button {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logout {
+  height: 75%;
+  width: 90px;
+  border-radius: 4px;
+  margin: 25px;
+  font-size: 15px;
+}
+
+.nav-logout:hover {
+  cursor: pointer;
+  filter: brightness(85%);
+}
+
+.nav-title {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.current-user {
+  color: white;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-reviews {
+  margin: 30px;
+}
