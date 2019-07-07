@@ -1,6 +1,6 @@
 class Api::BeersController < ApplicationController
 
-  before_action :require_login
+  # before_action :require_login
 
   def create
     @beer = Beer.new(beer_params)

@@ -6,12 +6,14 @@ import NavContainer from '../nav/nav_container';
 class BeerIndex extends React.Component {
   constructor(props) {
     super(props);
+
+    this.currentUser = this.props.currentUser
   }
 
 
 
 componentDidMount() {
-  this.props.fetchBeers();
+    this.props.fetchBeers()
 };
 
 render() {

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const NavBar = ({ currentUser, logout }) => {
+  if (currentUser) {
   return (
     <div className="nav-bar">
       <div className="logo-title">
@@ -19,6 +20,9 @@ const NavBar = ({ currentUser, logout }) => {
       </div>
     </div>
   )
+  } else {
+    return null;
+  };
 };
 
 export default NavBar;
