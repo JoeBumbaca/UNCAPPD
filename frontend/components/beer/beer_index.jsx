@@ -6,12 +6,17 @@ import NavContainer from '../nav/nav_container';
 class BeerIndex extends React.Component {
   constructor(props) {
     super(props);
+
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-
+handleSubmit(e) {
+  e.preventDefault();
+  this.props.history.push('/beers/new');
+}
 
 componentDidMount() {
-    this.props.fetchBeers()
+  this.props.fetchBeers()
 };
 
 render() {
@@ -31,7 +36,7 @@ render() {
         <div className="index-form-main">
           <div className="index-form-header">
             <div className="index-title">Beers</div>
-            <button className="add">Add A Beer</button>
+            <button className="add" onClick={this.handleSubmit}>Add A Beer</button>
           </div>
             <div className="index-div"></div>
           <ul>

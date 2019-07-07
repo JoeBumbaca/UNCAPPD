@@ -44,48 +44,66 @@ class CreateBeerForm extends React.Component {
   }
 
   render() {
-    if (this.props.formType === "Create Beer") {
       return (
         <div>
           <NavContainer />
           <div className="create-form-main">
+            <div className="create-form">
             <div className="create-form-title">Add a Beer</div>
+              <div className="create-name" className="input">
+                <i className="fab fa-untappd"></i>
               <input type="text"
                 value={this.state.name}
                 onChange={this.update('name')}
                 placeholder="Beer Name"
+                className="create-input"
               />
+              </div>
               <br />
+              <div className="create-style" className="input">
+              <i className="fab fa-untappd"></i>
               < input type="text"
                 value={this.state.style}
                 onChange={this.update('style')}
                 placeholder="Style"
+                className="create-input"
               />
+              </div>
               <br />
+              <div className="create-abv" className="input">
+              <i className="fab fa-untappd"></i>
               < input type="text"
                 value={this.state.abv}
                 onChange={this.update('abv')}
                 placeholder="ABV"
+                className="create-input"
               />
+              </div>
               <br />
+              <div className="create-ibus" className="input">
+              <i className="fab fa-untappd"></i>
               < input type="text"
                 value={this.state.ibus}
                 onChange={this.update('ibus')}
                 placeholder="IBU"
+                className="create-input"
               />
+              </div>
               <br />
-              < input type="text"
+              <div className="create-description">
+              < textarea
                 value={this.state.description}
                 onChange={this.update('description')}
                 placeholder="Description"
-              />
+                className="create-input"
+              ></ textarea>
+              </div>
               <br />
             <input className="create-beer-button" type="submit" onClick={this.handleSubmit} value="Add The Beer!" />
-
+            </div>
           </div>
         </div>
       )
-    }
   }
 
 };
