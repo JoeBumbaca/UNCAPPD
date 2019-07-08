@@ -12,13 +12,12 @@ import Splash from "./Splash";
 const App = () => (
   <div>
     <Switch>
-      <AuthRoute exact path="/login" component={LoginFormContainer} />
-      <AuthRoute exact path="/signup" component={SignupFormContainer} />
+      <Route exact path="/login" component={LoginFormContainer} />
+      <Route exact path="/signup" component={SignupFormContainer} />
       <Route exact path="/beers/index" component={BeerIndexContainer} />
       <Route exact path="/beers/new" component={CreateBeerFormContainer} />
-      <Route exact path="/beers/edit" component={EditBeerFormContainer} />
-
-      <Route path="/" component={Splash} />
+      <Route path="/beers/edit" component={EditBeerFormContainer} />\
+      <Route exact path="/" component={Splash} />
     </Switch>
   </div>
 );

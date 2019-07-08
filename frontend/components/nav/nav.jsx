@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { logout } from '../../util/session_api_util';
 
 class NavBar extends React.Component {
@@ -12,8 +12,9 @@ class NavBar extends React.Component {
 
   handleLogout(e) { 
     e.preventDefault();
-    logout(this.props.currentUser);
-    this.props.history.push('/login');
+    console.log(this.props.currentUser);
+    this.props.logout();
+    this.props.history.push("/")
   }
 
   render () {
@@ -29,8 +30,12 @@ class NavBar extends React.Component {
           <li className="nav-beers">
               <Link to="/beers/index" className="navLink">Beers</Link>
           </li>
-          <li className="nav-reviews">Reviews</li>
-          <li className="nav-users">Users</li>
+          <li className="nav-reviews">
+            <Link to="/reviews/index" className="navLink">Reviews</Link>
+          </li>
+          <li className="nav-users">
+              <Link to="/users/index" className="navLink">Users</Link>
+          </li>
         </ul>
         <div className="user-button">
         <div className="current-user">{this.props.currentUser.username}</div>
@@ -45,4 +50,4 @@ class NavBar extends React.Component {
   };
 
 };
-export default NavBar;
+export default withRouter(NavBar);

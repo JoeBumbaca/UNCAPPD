@@ -14,7 +14,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    processForm: (beer) => dispatch(createBeer(beer)),
+    processForm: (beer) => dispatch(updateBeer(beer)),
     clearErrors: () => dispatch(removeErrors())
   };
 };

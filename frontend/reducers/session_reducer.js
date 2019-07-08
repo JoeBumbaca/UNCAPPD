@@ -6,7 +6,7 @@ const _nullSession = {
   currentUser: null
 };
 
-const sessionReducer = (state = {}, action) => {
+const sessionReducer = (state = _nullSession, action) => {
   Object.freeze(state);
   switch (action.type) {
     case LOGOUT_CURRENT_USER:
