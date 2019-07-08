@@ -1,8 +1,9 @@
 .index-main {
   background-color: rgb(246, 242, 232);
-  height: 100vh;
+  // height: 100vh;
   display: flex;
   justify-content: center;
+  
 }
 
 .index-form-main {
@@ -12,6 +13,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  // top: 100px;
+  // z-index: 999;
 }
 
 .index-title {
@@ -28,7 +32,7 @@
 }
 
 .index-item {
-  width: 730px;
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -36,6 +40,7 @@
 
 .index-description {
   font-weight: bolder;
+  align-items: center;
 }
 
 .index-item-div {
@@ -47,6 +52,7 @@
 
 .desc-box {
   align-items: center;
+  padding: 0 100px;
 }
 
 .edit-delete {

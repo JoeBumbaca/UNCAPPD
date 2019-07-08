@@ -20,18 +20,22 @@ class NavBar extends React.Component {
     if (this.props.currentUser) {
     return (
       <div className="nav-bar">
+        <div className="inner-nav-bar">
         <div className="logo-title">
         <img className="nav-logo" src={window.navLogoURL}/>
         <div className="nav-title">UNCAPPD</div>
         </div>
         <ul className="nav-links">
-          <li className="nav-beers">Beers</li>
+          <li className="nav-beers">
+              <Link to="/beers/index" className="navLink">Beers</Link>
+          </li>
           <li className="nav-reviews">Reviews</li>
           <li className="nav-users">Users</li>
         </ul>
         <div className="user-button">
         <div className="current-user">{this.props.currentUser.username}</div>
           <button className="nav-logout" onClick={this.handleLogout}>Logout</button>
+        </div>
         </div>
       </div>
     )

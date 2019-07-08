@@ -2,12 +2,18 @@
   height: 50px;
   background-color: rgb(255, 205, 1);
   display: flex;
+}
+
+.inner-nav-bar {
+  width: 80%;
+  display: flex;
   justify-content: space-around;
 }
 
 .nav-logo {
   height: 100%;
    margin: 10px;
+   margin-left: 375px;
 }
 
 .logo-title {
@@ -16,7 +22,7 @@
 }
 
 .nav-links {
-  margin-right: 220px;
+  margin-right: 300px;
   display: flex;
   align-items: center;
   color: white;
@@ -57,4 +63,13 @@
 
 .nav-reviews {
   margin: 80px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  cursor: pointer;
 }
