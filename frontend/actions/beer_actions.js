@@ -37,3 +37,8 @@ export const fetchBeers = () => dispatch => (
   APIUtil.fetchBeers()
   .then(beers => dispatch(receiveBeers(beers)))
 );
+
+export const updateBeer = (beer) => dispatch => (
+  APIUtil.updateBeer(beer)
+  .then( beer => dispatch(receiveBeer(beer)))
+)

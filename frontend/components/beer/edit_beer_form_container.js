@@ -5,6 +5,7 @@ import EditBeerForm from './edit_beer_form';
 
 const mapStateToProps = state => {
   return {
+    
     errors: state.errors.beerErrors,
     formType: 'Edit Beer'
   };

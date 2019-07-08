@@ -25,6 +25,7 @@ render() {
       <BeerIndexItem
         key={beer.id}
         beer={beer}
+        history={history}
       />
     )
   })

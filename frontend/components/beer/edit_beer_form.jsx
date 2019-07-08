@@ -49,7 +49,7 @@ class EditBeerForm extends React.Component {
         <NavContainer />
         <div className="create-form-main">
           <div className="create-form">
-            <div className="create-form-title">Add a Beer</div>
+            <div className="create-form-title">Edit this Beer</div>
             <div className="create-name" className="input">
               <i className="fab fa-untappd"></i>
               <input type="text"
@@ -99,7 +99,7 @@ class EditBeerForm extends React.Component {
               ></ textarea>
             </div>
             <br />
-            <input className="create-beer-button" type="submit" onClick={this.handleSubmit} value="Add The Beer!" />
+            <input className="create-beer-button" type="submit" onClick={this.handleSubmit} value="Edit The Beer!" />
           </div>
         </div>
       </div>

@@ -22,6 +22,11 @@ class Api::BeersController < ApplicationController
 
   def update
     @beer = Beer.find(params[:id])
+    if @beer.update_attributes(beer_params)
+      render :show
+    else 
+      render json: @beer.errors.full_messages, status: 422
+    end
   end
 
   def destroy

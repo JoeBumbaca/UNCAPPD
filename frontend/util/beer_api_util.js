@@ -8,11 +8,10 @@ export const create = (beer) => (
   })
 );
 
-export const fetchBeers = data => (
+export const fetchBeers = () => (
   $.ajax({
     method: "GET",
     url: "/api/beers",
-    data
   })
 );
 
@@ -20,5 +19,15 @@ export const fetchBeer = (id) => (
   $.ajax({
     method: "GET",
     url: `/api/beers/${id}`,
+  })
+);
+
+export const updateBeer = (beer) => (
+  $.ajax({
+    method: "PATCH",
+    url: `/api/beers/${beer.id}`,
+    data: {
+      beer
+    }
   })
 );
