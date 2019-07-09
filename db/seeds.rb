@@ -17,7 +17,7 @@ ActiveRecord::Base.transaction do
    kirin = Beer.create(name: "Kirin Ichiban", style: "Lager" , abv: 4.9, ibus: 18, description: "Its nose and flavour are super malty and the first sip finished with a lot of corn.")
    bmoon = Beer.create(name: "Blue Moon", style: "Belgian Wit-bier", abv: 5.4, ibus: 9, description: "A refreshing, medium-bodied, unfiltered Belgian-style wheat ale spiced with fresh coriander and orange peel for a uniquely complex taste and an uncommonly smooth finish.")
    phasechange= Beer.create(name: "Lagunitas Phase Change", style: "Wet Hopped Juicy Ale", abv: 7.4, ibus: 60, description: "An unfiltered, wet-hop ale packed full of lupulin-drenched Simcoe, Citra & Mosaic hops.")
-   guinness= Beer.create(name: "Guinness Draught", style: "Irish Dry Stout", abv: 4.2 ibus: 45, description: "Unmistakeably GUINNESS, from the first velvet sip to the last, lingering drop. And every deep-dark satisfying mouthful in between.")
+   guinness= Beer.create(name: "Guinness Draught", style: "Irish Dry Stout", abv: 4.2, ibus: 45, description: "Unmistakeably GUINNESS, from the first velvet sip to the last, lingering drop. And every deep-dark satisfying mouthful in between.")
    racer5= Beer.create(name: "Bear Republic Racer 5", style: "IPA", abv: 7.5, ibus: 75, description: "This hoppy IPA is a full bodied beer brewed with malted barley, wheat, and crystal malts. The malt base is designed to highlight the unique floral qualities of Columbus and Cascade hops from the Pacific Northwest.")
    bigfoot = Beer.create(name: "Sierra Nevada Bigfoot Ale", style: "Barleywine", abv: 9.6, ibus: 90, description: "A dense, fruity bouquet, an intense flavor palate and a deep reddish-brown color. Its big maltiness is superbly balanced by a wonderfully bittersweet hoppiness.")
    lupulin = Beer.create(name: "Dr. Lulupin", style: "Triple IPA", abv: 11.3, ibus: 133, description: "Somewhat of an anomaly, Doctor Lupulin is brewed with loads of hops but is not too bitter. A high ABV brew that is easy drinking without excessive alcohol heat. Is that mango having a pleasant conversation with dank? Yep.")
@@ -37,5 +37,5 @@ ActiveRecord::Base.transaction do
   demo = User.create(username: "ipaLover42", password: "hunter12", email: "ipaLover42@getdrunk.tonight")
   michelle = User.create(username: "MichelleB", password: "password123", email: "bellewilber@gmail.com")
   dave = User.create(username: "AnyGivenSunde", password: "beeeeeer", email: "dave@dave.dave")
-  
+
 end
