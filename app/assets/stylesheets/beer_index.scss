@@ -1,6 +1,5 @@
 .index-main {
   background-color: rgb(246, 242, 232);
-  // height: 100vh;
   display: flex;
   justify-content: center;
   
@@ -14,8 +13,6 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  // top: 100px;
-  // z-index: 999;
 }
 
 .index-title {
@@ -106,7 +103,11 @@
 }
 
 .beer-index-pic {
-  width: 125px;
-  height: 200px;
+  width: 150px;
+  height: 225px;
   object-fit: contain;
+}
+
+.index-name {
+  font-size: 20px;
 }
