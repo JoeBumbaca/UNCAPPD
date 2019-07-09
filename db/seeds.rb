@@ -37,5 +37,13 @@ ActiveRecord::Base.transaction do
   demo = User.create(username: "ipaLover42", password: "hunter12", email: "ipaLover42@getdrunk.tonight")
   michelle = User.create(username: "MichelleB", password: "password123", email: "bellewilber@gmail.com")
   dave = User.create(username: "AnyGivenSunde", password: "beeeeeer", email: "dave@dave.dave")
+    
 
-end
+    Beer.all.each_with_index do |beer, idx|
+        file = EzDownload.open("https://uncapped-seed.s3-us-west-1.amazonaws.com/beer/0#{idx+1}-beer.jpg")
+        beer.photo.attach(io: file, filename: "0#{idx+1}-beer.jpg")
+        beer.save!
+    end
+
+
+ end
