@@ -1,7 +1,5 @@
 class Api::BeersController < ApplicationController
 
-  # before_action :require_login
-
   def create
     @beer = Beer.new(beer_params)
     if @beer.save
@@ -13,6 +11,7 @@ class Api::BeersController < ApplicationController
 
   def show
     @beer = Beer.find(params[:id])
+    render :show
   end
 
   def index

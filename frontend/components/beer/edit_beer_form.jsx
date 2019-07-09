@@ -30,8 +30,8 @@ class EditBeerForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const beer = Object.assign({},this.state);
-    this.props.processForm(beer);
-    this.props.history.push('/beers/index');
+    this.props.processForm(beer)
+    .then(() => this.props.history.push('/beers/index'));
   }
 
 
