@@ -3,6 +3,8 @@ import * as APIUtil from '../util/beer_api_util';
 export const RECEIVE_BEERS = "RECEIVE_BEERS";
 export const RECEIVE_BEER = "RECEIVE_BEER";
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
+export const REMOVE_BEER = "REMOVE_BEER";
+export const REMOVE_ERRORS = "REMOVE_ERRORS";
 
 const receiveBeers = beers => ({
   type: RECEIVE_BEERS,
@@ -19,13 +21,20 @@ const receiveErrors = errors => ({
   errors
 });
 
+const removeBeer = beer => ({
+  type: REMOVE_BEER,
+  beer
+})
+
 export const removeErrors = () => ({
   type: REMOVE_ERRORS,
 });
 
 export const createBeer = formBeer => dispatch => (
   APIUtil.create(formBeer)
-  .then( beer => dispatch(receiveBeer(beer)))
+  .then( beer => dispatch(receiveBeer(beer)),
+  err => (dispatch(receiveErrors(err.responseJSON))
+  ))
 );
 
 export const fetchBeer = id => dispatch => (
@@ -40,10 +49,12 @@ export const fetchBeers = () => dispatch => (
 
 export const updateBeer = (beer) => dispatch => (
   APIUtil.updateBeer(beer)
-  .then( beer => dispatch(receiveBeer(beer)))
-)
+  .then( beer => dispatch(receiveBeer(beer)),
+  err => (dispatch(receiveErrors(err.responseJSON))
+  ))
+);
 
 export const deleteBeer = (beer) => dispatch => (
   APIUtil.deleteBeer(beer)
-  .then( beer => dispatch())
+  .then( beer => dispatch(removeBeer(beer)))
 )

@@ -32,6 +32,7 @@ class Api::BeersController < ApplicationController
   def destroy
     @beer = Beer.find(params[:id])
     @beer.destroy
+    render json: @beer
   end
 
 

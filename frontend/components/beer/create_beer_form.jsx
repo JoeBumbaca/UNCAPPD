@@ -17,6 +17,10 @@ class CreateBeerForm extends React.Component {
 
   }
 
+  componentWillMount() {
+    this.props.clearErrors();
+  }
+
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -26,8 +30,8 @@ class CreateBeerForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const beer = Object.assign({}, this.state);
-    this.props.processForm(beer);
-    this.props.history.push('/beers/index');
+    this.props.processForm(beer)
+    .then(() => this.props.history.push('/beers/index'));
   }
 
 
@@ -50,6 +54,7 @@ class CreateBeerForm extends React.Component {
           <div className="create-form-main">
             <div className="create-form">
             <div className="create-form-title">Add a Beer</div>
+              {this.renderErrors()}
               <div className="create-name" className="input">
                 <i className="fab fa-untappd"></i>
               <input type="text"

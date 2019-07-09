@@ -10,6 +10,8 @@
   width: 375px;
   background-color: white;
   margin: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .login-title {
@@ -192,5 +194,6 @@
 
 .errors {
   color: red;
-  margin-left: 55px;
+  // margin-left: 55px;
+
 }
