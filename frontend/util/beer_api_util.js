@@ -31,3 +31,10 @@ export const updateBeer = (beer) => (
     }
   })
 );
+
+export const deleteBeer = (beer) => (
+  $.ajax({
+    method: "DELETE",
+    url: `api/beers/${beer.id}`
+  })
+)

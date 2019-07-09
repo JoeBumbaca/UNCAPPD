@@ -42,3 +42,8 @@ export const updateBeer = (beer) => dispatch => (
   APIUtil.updateBeer(beer)
   .then( beer => dispatch(receiveBeer(beer)))
 )
+
+export const deleteBeer = (beer) => dispatch => (
+  APIUtil.deleteBeer(beer)
+  .then( beer => dispatch())
+)

@@ -26,6 +26,8 @@ render() {
         key={beer.id}
         beer={beer}
         history={history}
+        deleteBeer={this.props.deleteBeer}
+        fetchBeers={this.props.fetchBeers}
       />
     )
   })

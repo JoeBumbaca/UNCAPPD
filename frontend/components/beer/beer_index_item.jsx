@@ -6,16 +6,17 @@ class BeerIndexItem extends React.Component {
   constructor(props) {
     super(props);
 
-    this.handleEdit = this.handleEdit.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
 
   }
 
 
-  handleEdit(e) {
+  handleDelete(e) {
     e.preventDefault();
-    const beer = Object.assign({}, this.state);
-    // this.props.processForm(beer);
-    this.props.history.push(`/beers/edit/${this.props.beer.id}`);
+    let beer = this.props.beer
+    this.props.deleteBeer(beer);
+    this.props.fetchBeers();
+    // this.props.history.push(`/beers/index`);
   }
 
   render() {
@@ -34,8 +35,9 @@ class BeerIndexItem extends React.Component {
         <p className="index-ibus">{ beer.ibus } IBU</p >
         </div>
         <div className="edit-delete">
-          <button className="edit-beer" className="index-buttons" onClick={this.handleEdit}>Edit Beer</button>
-          <button className="delete-beer" className="index-buttons">Delete Beer</button>
+          <Link to={ {pathname: `/beers/edit/${this.props.beer.id}`} }>
+            <button className="edit-beer" className="index-buttons" >Edit Beer</button></Link>
+          <button className="delete-beer" className="index-buttons" onClick={this.handleDelete}>Delete Beer</button>
         </div>
       </div>
       <div className="index-bottom">

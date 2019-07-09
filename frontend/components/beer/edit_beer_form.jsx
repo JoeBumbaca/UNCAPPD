@@ -1,20 +1,25 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import NavContainer from '../nav/nav_container';
 
 class EditBeerForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      name: '',
-      style: '',
-      abv: '',
-      ibus: '',
-      description: ''
-    };
-
     this.handleSubmit = this.handleSubmit.bind(this);
+  
+  }
 
+  componentDidMount() {
+    if (this.props.fetchBeer(this.props.match.params.beerId)) {
+      // this.setState({
+      //   id: this.props.beers.id,
+      //   name: this.props.beers.name,
+      //   style: this.props.beers.style,
+      //   abv: this.props.beers.abv,
+      //   ibus: this.props.beers.ibus,
+      //   description: this.props.beers.description
+      // })
+    }
   }
 
   update(field) {
@@ -25,7 +30,7 @@ class EditBeerForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const beer = Object.assign({}, this.state);
+    const beer = Object.assign({},this.state);
     this.props.processForm(beer);
     this.props.history.push('/beers/index');
   }
@@ -44,6 +49,10 @@ class EditBeerForm extends React.Component {
   }
 
   render() {
+    let beer;
+    if(!this.props.beers){
+       return null;
+    } else {
     return (
       <div>
         <NavContainer />
@@ -53,9 +62,9 @@ class EditBeerForm extends React.Component {
             <div className="create-name" className="input">
               <i className="fab fa-untappd"></i>
               <input type="text"
-                value={this.state.name}
+                value={this.props.beers.name}
                 onChange={this.update('name')}
-                placeholder="Beer Name"
+                placeholder="Name"
                 className="create-input"
               />
             </div>
@@ -63,7 +72,7 @@ class EditBeerForm extends React.Component {
             <div className="create-style" className="input">
               <i className="fab fa-untappd"></i>
               < input type="text"
-                value={this.state.style}
+                value={this.props.beers.style}
                 onChange={this.update('style')}
                 placeholder="Style"
                 className="create-input"
@@ -73,7 +82,7 @@ class EditBeerForm extends React.Component {
             <div className="create-abv" className="input">
               <i className="fab fa-untappd"></i>
               < input type="text"
-                value={this.state.abv}
+                value={this.props.beers.abv}
                 onChange={this.update('abv')}
                 placeholder="ABV"
                 className="create-input"
@@ -83,7 +92,7 @@ class EditBeerForm extends React.Component {
             <div className="create-ibus" className="input">
               <i className="fab fa-untappd"></i>
               < input type="text"
-                value={this.state.ibus}
+                value={this.props.beers.ibus}
                 onChange={this.update('ibus')}
                 placeholder="IBU"
                 className="create-input"
@@ -92,7 +101,7 @@ class EditBeerForm extends React.Component {
             <br />
             <div className="create-description">
               < textarea
-                value={this.state.description}
+                value={this.props.beers.description}
                 onChange={this.update('description')}
                 placeholder="Description"
                 className="create-input"
@@ -105,7 +114,8 @@ class EditBeerForm extends React.Component {
       </div>
     )
   }
+}
 
 };
 
-export default EditBeerForm;
+export default withRouter(EditBeerForm);
