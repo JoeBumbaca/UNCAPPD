@@ -101,6 +101,8 @@ class CreateBeerForm extends React.Component {
                 onChange={this.update('description')}
                 placeholder="Description"
                 className="create-input"
+                rows="5"
+                cols="50"
               ></ textarea>
               </div>
               <br />
