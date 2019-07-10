@@ -40,6 +40,10 @@ class BeerIndexItem extends React.Component {
           <button className="delete-beer" className="index-buttons" onClick={this.handleDelete}>Delete Beer</button>
         </div>
       </div>
+      <div className="index-middle">
+        <Link to="/reviews/new">
+          <button className="review-beer" className="index-review" >Review Beer</button></Link>
+      </div>
       <div className="index-bottom">
         <div className="index-item-div"></div>
         <div className="desc-box">

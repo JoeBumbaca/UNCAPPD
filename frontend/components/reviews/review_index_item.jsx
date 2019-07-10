@@ -15,6 +15,7 @@ class ReviewIndexItem extends React.Component {
         <div>{ review.user[review.reviewer_id].username }</div>
         <div>{ review.rating }</div>
         <div>{ review.body }</div>
+        <br />
       </li>
     )}
 }
