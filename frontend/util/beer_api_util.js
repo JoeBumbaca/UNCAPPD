@@ -18,7 +18,7 @@ export const fetchBeers = () => (
 export const fetchBeer = (id) => (
   $.ajax({
     method: "GET",
-    url: `/api/beers/${id}`,
+    url: `/api/beers/${id}`
   })
 );
 

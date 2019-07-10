@@ -27,7 +27,7 @@ class BeerIndexItem extends React.Component {
         <img className="beer-index-pic"src={beer.photoUrl}/>
         <p className="index-name">{beer.name}</p>
         <div className="rating-style">
-        <p>Avg rating: </p>
+        <p className="index-rating">Avg rating: </p>
         <p className="index-style">{ beer.style }</p>
         </div>
         <div className="abv-ibus">
@@ -43,6 +43,7 @@ class BeerIndexItem extends React.Component {
       <div className="index-bottom">
         <div className="index-item-div"></div>
         <div className="desc-box">
+          <div className="description-title">~Description~</div>
           <p className="index-description">{ beer.description }</p >
         </div>
         <div className="index-div"></div>

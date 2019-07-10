@@ -4,6 +4,8 @@ import configureStore from './store/store';
 import Root from './components/root';
 import { login, logout, createNewUser } from './actions/session_actions'
 import { fetchBeers, fetchBeer, updateBeer } from './actions/beer_actions';
+import { createReview, fetchReview, fetchReviews } from '../frontend/util/review_api_util';
+
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -24,9 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-  window.fetchBeers = fetchBeers;
-  window.fetchBeer = fetchBeer;
-  window.updateBeer = updateBeer;
+
+  window.fetchReviews = fetchReviews;
+  window.fetchReview = fetchReview;
 
 
 

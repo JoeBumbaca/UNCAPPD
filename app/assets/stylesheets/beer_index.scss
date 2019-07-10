@@ -36,6 +36,7 @@
 }
 
 .index-description {
+  font-size: 19px;
   font-weight: bolder;
   align-items: center;
 }
@@ -44,6 +45,7 @@
   height: 1px;
   background-color: lightgrey;
   width: 90%;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
@@ -77,6 +79,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .index-form-header {
@@ -109,5 +112,32 @@
 }
 
 .index-name {
+  font-size: 22px;
+  color: rgb(233, 160, 3);
+}
+
+.index-abv {
+  font-size: 18px;
+}
+
+.index-ibus {
+  font-size: 18px;
+}
+
+.index-rating {
+  font-size: 18px;
+}
+
+.index-style {
+  font-size: 18px;
+}
+
+.description-title {
+  color: rgb(233, 160, 3);
   font-size: 20px;
+}
+
+.description-box {
+  display: flex;
+  flex-direction: column;
 }
