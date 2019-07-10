@@ -10,14 +10,24 @@ class ReviewIndexItem extends React.Component {
 
     let review = this.props.review
     return (
-      <li>
-        <div>{ review.beer[review.beer_id].name }</div>
-        <div>{ review.user[review.reviewer_id].username }</div>
-        <div>{ review.rating }</div>
-        <div>{ review.body }</div>
+      <div>
+        <br />
+        <li className="review-inner-main">
+          <div className="indv-review-header">
+          <div className="indv-review-name">{review.user[review.reviewer_id].username}</div>
+          <div> is drinking a </div> 
+          <div className="indv-review-beer">{review.beer[review.beer_id].name}</div>
+          </div>
+          <br/>
+          <div className="indv-review-bottom">
+            <div>{ review.body }</div>
+            <div>{ review.rating }</div>
+          </div>
         <br />
       </li>
+      </div>
     )}
 }
 
 export default ReviewIndexItem;
+

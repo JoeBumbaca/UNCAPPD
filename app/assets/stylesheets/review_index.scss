@@ -1,0 +1,53 @@
+.review-outer-main {
+  background-color: rgb(246, 242, 232);
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.review-inner-main {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.review-inner-outer {
+  display: flex;
+}
+
+.reviews-index-title {
+  display: flex;
+  align-content: center;
+  background-color: white;
+  padding: 20px 40px;
+  font-size: 25px;
+  color: rgb(233, 160, 3);
+}
+
+.indv-review-name {
+  font-size: 22px;
+  color: rgb(233, 160, 3);
+  margin-right: 7px;
+}
+
+.indv-review-header {
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+}
+.indv-review-beer {
+  margin-left: 7px;
+  font-size: 22px;
+  color: rgb(233, 160, 3);
+}
+
+.indv-review-bottom {
+  border: 1px solid lightgrey;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 2px;
+}

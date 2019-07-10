@@ -28,8 +28,9 @@ class ReviewIndex extends React.Component {
     return (
       <div>
         <NavContainer />
-        <div className="review-main">
-          <ul>
+        <div className="review-outer-main"> 
+          <div className="reviews-index-title">Reviews</div>
+          <ul className="review-innner-outer">
           { reviews }
           </ul>
         </div>

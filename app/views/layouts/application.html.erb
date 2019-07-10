@@ -4,13 +4,17 @@
     <title>Uncappd</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <link rel="icon" href="/app/assets/images/unnamed.png" type="image/x-icon" >
+    <link rel="icon" href="https://uncapped-seed.s3-us-west-1.amazonaws.com/nav-logo.png" type="image/x-icon" >
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
     <%= javascript_include_tag 'application' %>
 
     <script type="text/javascript">
       window.mainImgURL = "<%= image_url('beer.jpg') %>"
+    </script>
+
+    <script type="text/javascript">
+      window.genericBeerImgURL = "<%= image_url('generic_beer.jpg') %>"
     </script>
 
     <script type="text/javascript">
