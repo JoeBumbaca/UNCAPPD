@@ -14,13 +14,15 @@ class Review < ApplicationRecord
   validates :beer_id, :reviewer_id, :rating, :body, presence: true
 
   # has_one_attached :photo
+
+
+
+belongs_to :reviewer,
+foreign_key: :reviewer_id,
+class_name: :User
+
+belongs_to :beer,
+  foreign_key: :beer_id,
+  class_name: :Beer
+
 end
-
-
-# belongs_to :reviewer,
-# foreign_key: :reviewer_id,
-# class_name: :User
-
-# belongs_to :beer,
-# foreign_key: :beer_id,
-# class_name: :Beer

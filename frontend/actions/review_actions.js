@@ -25,4 +25,17 @@ export const removeErrors = () => ({
   type: REMOVE_ERRORS,
 });
 
-export const 
+export const fetchReviews = () => dispatch => (
+  APIUtil.fetchReviews()
+  .then( reviews => dispatch(receiveReviews(reviews)))
+);
+
+export const fetchReview = id => dispatch => (
+  APIUtil.fetchReview(id)
+  .then( review => dispatch(receiveReview(review)))
+);
+
+export const createReview = formReview => dispatch => (
+  APIUtil.create(formReview)
+  .then( review => dispatch(receiveReview(review)))
+);

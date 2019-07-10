@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import { updateBeer, removeErrors, fetchBeers} from '../../actions/beer_actions';
+import { fetchBeer, updateBeer, removeErrors, fetchBeers} from '../../actions/beer_actions';
 import EditBeerForm from './edit_beer_form';
 
 const mapStateToProps = (state, ownProps) => {

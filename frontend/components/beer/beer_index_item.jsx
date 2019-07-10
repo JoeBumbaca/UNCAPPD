@@ -35,7 +35,7 @@ class BeerIndexItem extends React.Component {
         <p className="index-ibus">{ beer.ibus } IBU</p >
         </div>
         <div className="edit-delete">
-          <Link to={ {pathname: `/beers/edit/${this.props.beer.id}`, beer: {beer} } } >
+          <Link to={ {pathname: `/beers/edit/${this.props.beer.id}`, beer: { beer} } } >
             <button className="edit-beer" className="index-buttons" >Edit Beer</button></Link>
           <button className="delete-beer" className="index-buttons" onClick={this.handleDelete}>Delete Beer</button>
         </div>
