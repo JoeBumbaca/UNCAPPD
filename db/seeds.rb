@@ -7,9 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 ActiveRecord::Base.transaction do
 
+
+  Review.destroy_all
   Beer.destroy_all
   User.destroy_all
-  Review.destroy_all
 
   lagunitas = Beer.create(name: "Lagunitas IPA", style: "IPA", abv: 6.2, ibus: 51, description: "A well-rounded, highly drinkable IPA. A bit of Caramel Malt barley provides the richness that mellows out the twang of the hops.")
   fw805 = Beer.create(name: "Firestone Walker 805", style: "Blonde Ale", abv: 4.7, ibus: 20, description: "A light, refreshing blonde ale created for the laid back California lifestyle. Subtle malt sweetness is balanced by a touch of hops
