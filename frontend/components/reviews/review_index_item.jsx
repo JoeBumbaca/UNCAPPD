@@ -20,8 +20,11 @@ class ReviewIndexItem extends React.Component {
           </div>
           <br/>
           <div className="indv-review-bottom">
-            <div>{ review.body }</div>
-            <div>{ review.rating }</div>
+            <div className="indv-review-body">{ review.body }</div>
+            <div className="stars">
+            <img className="review-stars"src={window.starImgURL} />
+            <img className="review-stars"src={window.starImgURL} />
+            </div>
           </div>
         <br />
       </li>
