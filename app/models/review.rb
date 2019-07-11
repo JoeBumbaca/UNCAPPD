@@ -13,7 +13,7 @@ class Review < ApplicationRecord
 
   validates :beer_id, :reviewer_id, :rating, :body, presence: true
 
-  # has_one_attached :photo
+  has_one_attached :photo
 
 
 

@@ -33,35 +33,35 @@ ActiveRecord::Base.transaction do
    blindpig= Beer.create(name: "Russian River Blind Pig", style: "IPA", abv: 6.1, ibus: 70, description: "Full-bodied, very hoppy, with citrus, pine, fruity notes and a nice dry, bitter finish!")
    rasputin= Beer.create(name: "North Coast Old Rasputin", style: "Russian Imperial Stout", abv: 9.0, ibus: 75, description: "It’s a rich, intense brew with big complex flavors and a warming finish.")
 
-  joe = User.create(username: "JoeBumbaca", password: "hunter123", email: "joebumbaca@gmail.com")
+  joe = User.create(username: "JoeyBoom", password: "hunter123", email: "jboom@gmail.com")
   nico = User.create(username: "nico2017", password: "password", email: "cute1@gmail.com")
-  michelle = User.create(username: "MichelleB", password: "password123", email: "bellewilber@gmail.com")
+  michelle = User.create(username: "MichelleB", password: "password123", email: "mamaB@gmail.com")
   dave = User.create(username: "AnyGivenSunde", password: "beeeeeer", email: "dave@dave.dave")
   danny = User.create(username: "SesinedFries", password: "morebeer", email: "copiers@benicia.com")
-  demo = User.create(username: "ipaLover42", password: "hunter12", email: "ipaLover42@getdrunk.tonight")
+  demo = User.create(username: "ipaLover42", password: "hunter12", email: "ipaLover42@gethops.dank")
 
 
-  one = Review.create(beer_id: fw805.id, reviewer_id: nico.id, rating: 4, body: )
-  two = Review.create(beer_id: celebration.id, reviewer_id: joe.id, rating: 5, body: )
-  three = Review.create(beer_id: blindpig.id, reviewer_id: michelle.id, rating: 5, body: )
-  four = Review.create(beer_id: freshsqueezed.id, reviewer_id: dave.id, rating: 4, body: )
-  five = Review.create(beer_id: bmoon.id, reviewer_id: nico.id, rating: 2, body: )
-  six = Review.create(beer_id: steamwhistle.id, reviewer_id: michelle.id, rating: 3, body: )
-  seven = Review.create(beer_id: kirin.id, reviewer_id: joe.id, rating: 2, body: )
-  eight = Review.create(beer_id: spacedust.id, reviewer_id: danny.id, rating: 3, body: )
-  nine = Review.create(beer_id: phasechange.id, reviewer_id: joe.id, rating: 5, body: )
-  ten = Review.create(beer_id: racer5.id, reviewer_id: nico.id, rating: 4, body: )
-  eleven = Review.create(beer_id: duet.id, reviewer_id: dave.id, rating: 4, body: )
-  twelve = Review.create(beer_id: rasputin.id, reviewer_id: michelle.id, rating: 5, body: )
-  thirteen = Review.create(beer_id: denogg.id, reviewer_id: nico.id, rating: 4, body: )
-  fourteen = Review.create(beer_id: lagunitas.id, reviewer_id: danny.id, rating: 4, body: )
-  fifteen = Review.create(beer_id: lupulin.id, reviewer_id: nico.id, rating: 4, body: )
-  sixteen = Review.create(beer_id: guinness.id, reviewer_id: joe.id, rating: 3, body: )
-  seventeen = Review.create(beer_id: stella.id, reviewer_id: michelle.id, rating: 3, body: )
-  eighteen = Review.create(beer_id: bigfoot.id, reviewer_id: joe.id, rating: 3, body: )
-  nineteen = Review.create(beer_id: coors, reviewer_id: dave.id, rating: 2, body: )
-  twenty = Review.create(beer_id: oatis.id, reviewer_id: joe.id, rating: 2, body: )
-  twentyone = Review.create(beer_id: celebration.id, reviewer_id: michelle.id, rating: 3, body: )
+  one = Review.create(beer_id: fw805.id, reviewer_id: nico.id, rating: 3, body: "Had this while hanging out with some friends.  Easy drinking Ale, goes down smooth.  Subtle hops balance the malt.  Finishes with a touch of honey.")
+  two = Review.create(beer_id: celebration.id, reviewer_id: joe.id, rating: 5, body: "I look forward to this beer every year!  One of the best fresh hop beers I have ever had!  One sip and you will be smitten.  Be careful, this one goes down easy.")
+  three = Review.create(beer_id: blindpig.id, reviewer_id: michelle.id, rating: 5, body: "Everyone is on that Pliny hype, but this is Russian River's best IPA by far.  Too bad they only let you take a 6 pack.")
+  four = Review.create(beer_id: freshsqueezed.id, reviewer_id: dave.id, rating: 4, body: "Deschutes really hit it out of the park with this one.  Hops are definitely in your face, but not astringent.  Love the logo!")
+  five = Review.create(beer_id: bmoon.id, reviewer_id: nico.id, rating: 2, body: "This is ok for what it is.  I'd prefer a real Witbier, but slap a slice of orange on the glass and it tastes ok.")
+  six = Review.create(beer_id: steamwhistle.id, reviewer_id: michelle.id, rating: 3, body: "Do one thing and do it well!  Generally not a fan of lagers, but this one is alright!  Clean, crisp, and no off flavors.  Plus the brewery is super cool!  Win-win!")
+  seven = Review.create(beer_id: kirin.id, reviewer_id: joe.id, rating: 2, body: "Having this at a really good Ramen spot!  Exactly what I needed with this meal, though the beer itself is nothing really special.  But it does help cleanse the pallet in between these bites of amazing food!")
+  eight = Review.create(beer_id: spacedust.id, reviewer_id: danny.id, rating: 3, body: "This is ground control to Major Tom . . . This beer is pretty good.   The high alcohol percentage leaves it a little hot for my taste, but not nearly as bad as I thought it would be.")
+  nine = Review.create(beer_id: phasechange.id, reviewer_id: joe.id, rating: 5, body: "Lagunitas really comes through with this one.  I get a ton of citrus on the hops, its juicy without losing those signature hop flavors we have come to love on the West Coast.  Beer speaks, people mumble. . . especially after a few of these.")
+  ten = Review.create(beer_id: racer5.id, reviewer_id: nico.id, rating: 4, body: "Came back to this after a few years.  I forgot how gentle and floral the hops were.  Why doesn't this beer get more recognition?  Definitely my new standard for IPA!")
+  eleven = Review.create(beer_id: duet.id, reviewer_id: dave.id, rating: 4, body: "Alpine is a great brewery and Duet is one of their best in my opinion.  Hops are a little too forward this time around, but maybe it's just me.  I'll have to give it another try and see if they changed the recipe.")
+  twelve = Review.create(beer_id: rasputin.id, reviewer_id: michelle.id, rating: 5, body: "Much like it's namesake, this beer with predict your doom if you kill it.  Take it slow and savor the complexity.  Next time I'll have this in November in front of a crackling fire.  Or maybe camping, something about the smoke would pair really well with this one.")
+  thirteen = Review.create(beer_id: denogg.id, reviewer_id: nico.id, rating: 4, body: "This is a heavy hitter from Drakes.  Doesn't taste anything like the 9.75% is says it has.  Split this one with a friend, get Denogginized together.")
+  fourteen = Review.create(beer_id: lagunitas.id, reviewer_id: danny.id, rating: 4, body: "Still a super solid IPA.  While there have been many changes to the brewery and it's lineup, their IPA has reamained consistent and delicious.  Stays in my top 5 of all time.")
+  fifteen = Review.create(beer_id: lupulin.id, reviewer_id: nico.id, rating: 4, body: "Help me Dr!  In truth, you might actually need a doctor after drinking this one.  Why do triple IPAs exist, nobody knows.  They definitely balanced this one right though.  Perfect hop balance for the insane amount of malt required to reach  a beer of this magnitude.  Well done!")
+  sixteen = Review.create(beer_id: guinness.id, reviewer_id: joe.id, rating: 3, body: "This beer is definitely not as heavy as people say that it is.  Got the perfect pour from my local barkeep, and this one is settling in nicely.  Not my favorite, or my go to.  But somtimes the velvety mouthfeel of the nitrogen is just what you need.")
+  seventeen = Review.create(beer_id: stella.id, reviewer_id: michelle.id, rating: 3, body: "Stellllaaaa!!!  Sorry, I had to.  Simple, solid, ordinary.  Absolutely nothing wrong with this clean, crisp, lager.  I just can't find anything that makes it stand out either.  On to the next one.")
+  eighteen = Review.create(beer_id: bigfoot.id, reviewer_id: joe.id, rating: 3, body: "I'll catch you on the flips side.  Sierra does a great job with this barelywine style ale.  Great balance of malt and hop.  I'll have to have this one again soon.  Or maybe grab one to go and age it??")
+  nineteen = Review.create(beer_id: coors, reviewer_id: dave.id, rating: 2, body: "What is there to say about the American Light Lager?  Not much, enjoy it with friends, on a hot day.  Make sure the mountains are blue!  Crushing the can might be the most enjoyable part of drinking this beer.")
+  twenty = Review.create(beer_id: oatis.id, reviewer_id: joe.id, rating: 2, body: "You know what this beer needs. . . vanilla.  Nice mouthfeel, creamy texture, but not my cup of tea.  The malt was a little to roasted for my liking.  Needs a touch of sweetness to balance out the biterness this malt imparts.")
+  twentyone = Review.create(beer_id: celebration.id, reviewer_id: michelle.id, rating: 3, body: "Not nearly as good as my friends told me that it was.  Still, solid, and you really can taste that the hops are fresh.  I'm more of a pale ale fan, take that over this any day.")
 
     
 
@@ -72,4 +72,12 @@ ActiveRecord::Base.transaction do
     end
 
 
+    Review.all.each_with_index do |review, idx|
+      revfile = EzDownload.open("https://uncapped-seed.s3-us-west-1.amazonaws.com/reviews/0#{idx+1}-reviews.jpeg")
+      review.photo.attach(io: revfile, filename: "0#{idx+1}-reviews.jpg")
+      review.save!
+    end
+
  end
+
+ 
