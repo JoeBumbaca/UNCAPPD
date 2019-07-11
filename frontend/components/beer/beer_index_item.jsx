@@ -41,7 +41,7 @@ class BeerIndexItem extends React.Component {
         </div>
       </div>
       <div className="index-middle">
-        <Link to="/reviews/new">
+        <Link to={ {pathname: `/reviews/new/${this.props.beer.id}`, beer: { beer } } }>
           <button className="review-beer" className="index-review" >Review Beer</button></Link>
       </div>
       <div className="index-bottom">

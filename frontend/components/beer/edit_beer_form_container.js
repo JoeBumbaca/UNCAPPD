@@ -4,7 +4,6 @@ import { fetchBeer, updateBeer, removeErrors, fetchBeers} from '../../actions/be
 import EditBeerForm from './edit_beer_form';
 
 const mapStateToProps = (state, ownProps) => {
-  // debugger
   let id = ownProps.match.params.beerId;
   let beer;
   if (!state.entities.beers){

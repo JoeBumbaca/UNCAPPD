@@ -6,9 +6,14 @@ class CreateReviewForm extends React.Component {
   constructor(props) {
     super(props);
 
+    let state = {
+      beer: this.props.beer
+    }
 
   };
-
+  componentDidMount() {
+    this.props.fetchBeer(this.props.match.params.beerId);
+  }
 
   renderErrors() {
     return (
@@ -45,7 +50,7 @@ render() {
             <input name="rating" className="review" type="radio" value="5" /> 5 
           </form>
         </div>
-        <button className="review-submit">Post Review</button>
+        <button className="review-submit" onClick={this.handleReview}>Post Review</button>
         </div>
        </div>
      </div>
