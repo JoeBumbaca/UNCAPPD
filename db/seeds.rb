@@ -35,10 +35,34 @@ ActiveRecord::Base.transaction do
 
   joe = User.create(username: "JoeBumbaca", password: "hunter123", email: "joebumbaca@gmail.com")
   nico = User.create(username: "nico2017", password: "password", email: "cute1@gmail.com")
-  demo = User.create(username: "ipaLover42", password: "hunter12", email: "ipaLover42@getdrunk.tonight")
   michelle = User.create(username: "MichelleB", password: "password123", email: "bellewilber@gmail.com")
   dave = User.create(username: "AnyGivenSunde", password: "beeeeeer", email: "dave@dave.dave")
   danny = User.create(username: "SesinedFries", password: "morebeer", email: "copiers@benicia.com")
+  demo = User.create(username: "ipaLover42", password: "hunter12", email: "ipaLover42@getdrunk.tonight")
+
+
+  one = Review.create(beer_id: fw805.id, reviewer_id: nico.id, rating: 4, body: )
+  two = Review.create(beer_id: celebration.id, reviewer_id: joe.id, rating: 5, body: )
+  three = Review.create(beer_id: blindpig.id, reviewer_id: michelle.id, rating: 5, body: )
+  four = Review.create(beer_id: freshsqueezed.id, reviewer_id: dave.id, rating: 4, body: )
+  five = Review.create(beer_id: bmoon.id, reviewer_id: nico.id, rating: 2, body: )
+  six = Review.create(beer_id: steamwhistle.id, reviewer_id: michelle.id, rating: 3, body: )
+  seven = Review.create(beer_id: kirin.id, reviewer_id: joe.id, rating: 2, body: )
+  eight = Review.create(beer_id: spacedust.id, reviewer_id: danny.id, rating: 3, body: )
+  nine = Review.create(beer_id: phasechange.id, reviewer_id: joe.id, rating: 5, body: )
+  ten = Review.create(beer_id: racer5.id, reviewer_id: nico.id, rating: 4, body: )
+  eleven = Review.create(beer_id: duet.id, reviewer_id: dave.id, rating: 4, body: )
+  twelve = Review.create(beer_id: rasputin.id, reviewer_id: michelle.id, rating: 5, body: )
+  thirteen = Review.create(beer_id: denogg.id, reviewer_id: nico.id, rating: 4, body: )
+  fourteen = Review.create(beer_id: lagunitas.id, reviewer_id: danny.id, rating: 4, body: )
+  fifteen = Review.create(beer_id: lupulin.id, reviewer_id: nico.id, rating: 4, body: )
+  sixteen = Review.create(beer_id: guinness.id, reviewer_id: joe.id, rating: 3, body: )
+  seventeen = Review.create(beer_id: stella.id, reviewer_id: michelle.id, rating: 3, body: )
+  eighteen = Review.create(beer_id: bigfoot.id, reviewer_id: joe.id, rating: 3, body: )
+  nineteen = Review.create(beer_id: coors, reviewer_id: dave.id, rating: 2, body: )
+  twenty = Review.create(beer_id: oatis.id, reviewer_id: joe.id, rating: 2, body: )
+  twentyone = Review.create(beer_id: celebration.id, reviewer_id: michelle.id, rating: 3, body: )
+
     
 
     Beer.all.each_with_index do |beer, idx|
