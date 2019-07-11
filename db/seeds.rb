@@ -69,14 +69,12 @@ ActiveRecord::Base.transaction do
     Beer.all.each_with_index do |beer, idx|
         file = EzDownload.open("https://uncapped-seed.s3-us-west-1.amazonaws.com/beer/0#{idx+1}-beer.jpg")
         beer.photo.attach(io: file, filename: "0#{idx+1}-beer.jpg")
-        beer.save!
     end
 
 
     Review.all.each_with_index do |review, idx|
       revfile = EzDownload.open("https://uncapped-seed.s3-us-west-1.amazonaws.com/reviews/0#{idx+1}-reviews.jpeg")
       review.photo.attach(io: revfile, filename: "0#{idx+1}-reviews.jpeg")
-      review.save!
     end
 
  end
