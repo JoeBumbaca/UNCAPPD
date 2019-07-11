@@ -12,4 +12,4 @@ json.user do
   end
 end
 
-# json.photoUrl url_for(review.photo)
+json.photoUrl url_for(review.photo)

@@ -1,4 +1,5 @@
 import React from 'react';
+import StarCounter from './star_count';
 
 class ReviewIndexItem extends React.Component {
   constructor(props) {
@@ -22,8 +23,10 @@ class ReviewIndexItem extends React.Component {
           <div className="indv-review-bottom">
             <div className="indv-review-body">{ review.body }</div>
             <div className="stars">
-            <img className="review-stars"src={window.starImgURL} />
-            <img className="review-stars"src={window.starImgURL} />
+            <StarCounter count={review.rating}/>
+            </div>
+            <div className="pic-div">
+              <img className="beer-review-pic" src={review.photoUrl} />
             </div>
           </div>
         <br />
