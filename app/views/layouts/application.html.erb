@@ -9,31 +9,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
     <%= javascript_include_tag 'application' %>
 
-     <script type="text/javascript">
-      window.grayStarImgURL = "<%= image_url('gray_star.jpg') %>"
-    </script>
-    <script type="text/javascript">
-      window.starImgURL = "<%= image_url('star.jpg') %>"
-    </script>
-    <script type="text/javascript">
-      window.mainImgURL = "<%= image_url('beer.jpg') %>"
-    </script>
-    <script type="text/javascript">
-      window.genericBeerImgURL = "<%= image_url('generic_beer.jpg') %>"
-    </script>
-    <script type="text/javascript">
-      window.logoURL = "<%= image_url('bottle.svg') %>"
-    </script>
-    <script type="text/javascript">
-      window.phonesURL = "<%= image_url('phones.png') %>"
-    </script>
-    <script type="text/javascript">
-      window.navLogoURL = "<%= image_url('navlogo.png') %>"
-    </script>
-    <script type="text/javascript">
-      window.genericReviewURL = "<%= image_url('generic_review.jpg') %>"
-    </script>
 
+
+    <script type="text/javascript">
+      window.images = {
+        grayStar: "<%= image_url('gray_star.jpg') %>",
+        star: "<%= image_url('star.jpg') %>",
+        main: "<%= image_url('beer.jpg') %>",
+        genericBeer: "<%= image_url('generic_beer.jpg') %>",
+        logo: "<%= image_url('bottle.svg') %>",
+        phones: "<%= image_url('phones.png') %>",
+        navLogo: "<%= image_url('navlogo.png') %>",
+        genericReview: "<%= image_url('generic_review.jpg') %>"
+      }
+    </script>
 
 
      <% if logged_in? %>

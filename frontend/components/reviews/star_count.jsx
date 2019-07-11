@@ -4,43 +4,43 @@ import React from 'react';
 
 const StarCounter = ({ count }) => {
   let star1 = <div>
-    <img className="review-stars" src={window.starImgURL} />
-    <img className="review-stars" src={window.grayStarImgURL} />
-    <img className="review-stars" src={window.grayStarImgURL} />
-    <img className="review-stars" src={window.grayStarImgURL} />
-    <img className="review-stars" src={window.grayStarImgURL} />
+    <img className="review-stars" src={window.images.star} />
+    <img className="review-stars" src={window.images.grayStar} />
+    <img className="review-stars" src={window.images.grayStar} />
+    <img className="review-stars" src={window.images.grayStar} />
+    <img className="review-stars" src={window.images.grayStar} />
   </div>
 
   let star2 = <div>
-    <img className="review-stars" src={window.starImgURL} />
-    <img className="review-stars" src={window.starImgURL} />
-    <img className="review-stars" src={window.grayStarImgURL} />
-    <img className="review-stars" src={window.grayStarImgURL} />
-    <img className="review-stars" src={window.grayStarImgURL} />
+    <img className="review-stars" src={window.images.star} />
+    <img className="review-stars" src={window.images.star} />
+    <img className="review-stars" src={window.images.grayStar} />
+    <img className="review-stars" src={window.images.grayStar} />
+    <img className="review-stars" src={window.images.grayStar} />
   </div>
 
   let star3 = <div>
-    <img className="review-stars" src={window.starImgURL} />
-    <img className="review-stars" src={window.starImgURL} />
-    <img className="review-stars" src={window.starImgURL} />
-    <img className="review-stars" src={window.grayStarImgURL} />
-    <img className="review-stars" src={window.grayStarImgURL} />
+    <img className="review-stars" src={window.images.star} />
+    <img className="review-stars" src={window.images.star} />
+    <img className="review-stars" src={window.images.star} />
+    <img className="review-stars" src={window.images.grayStar} />
+    <img className="review-stars" src={window.images.grayStar} />
   </div>
 
   let star4 = <div>
-    <img className="review-stars" src={window.starImgURL} />
-    <img className="review-stars" src={window.starImgURL} />
-    <img className="review-stars" src={window.starImgURL} />
-    <img className="review-stars" src={window.starImgURL} />
-    <img className="review-stars" src={window.grayStarImgURL} />
+    <img className="review-stars" src={window.images.star} />
+    <img className="review-stars" src={window.images.star} />
+    <img className="review-stars" src={window.images.star} />
+    <img className="review-stars" src={window.images.star} />
+    <img className="review-stars" src={window.images.grayStar} />
   </div>
 
   let star5 = <div>
-    <img className="review-stars" src={window.starImgURL} />
-    <img className="review-stars" src={window.starImgURL} />
-    <img className="review-stars" src={window.starImgURL} />
-    <img className="review-stars" src={window.starImgURL} />
-    <img className="review-stars" src={window.starImgURL} />
+    <img className="review-stars" src={window.images.star} />
+    <img className="review-stars" src={window.images.star} />
+    <img className="review-stars" src={window.images.star} />
+    <img className="review-stars" src={window.images.star} />
+    <img className="review-stars" src={window.images.star} />
   </div>
 
   switch(count) {
