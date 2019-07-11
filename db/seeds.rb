@@ -75,7 +75,7 @@ ActiveRecord::Base.transaction do
 
     Review.all.each_with_index do |review, idx|
       revfile = EzDownload.open("https://uncapped-seed.s3-us-west-1.amazonaws.com/reviews/0#{idx+1}-reviews.jpeg")
-      review.photo.attach(io: revfile, filename: "0#{idx+1}-reviews.jpg")
+      review.photo.attach(io: revfile, filename: "0#{idx+1}-reviews.jpeg")
       review.save!
     end
 
