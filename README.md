@@ -14,6 +14,13 @@ The project was designed and built within a 10 day time-frame.  I do plan on add
 * Reviews are displayed in a separate feed.
 * Reviews apply the reviewer's username, the beer reviewed, and dynamically assign the star rating given.
 
+### Screenshots
+
+<img src="https://uncapped-seed.s3-us-west-1.amazonaws.com/screenshots/Screen+Shot+2019-07-12+at+11.30.28+AM.png">
+
+<img src="https://uncapped-seed.s3-us-west-1.amazonaws.com/screenshots/Screen+Shot+2019-07-12+at+11.27.25+AM.png">
+
+
 ### Product Design
 
 ### Technologies
