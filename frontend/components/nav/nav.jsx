@@ -21,6 +21,7 @@ class NavBar extends React.Component {
     if (this.props.currentUser) {
     return (
       <div className="nav-bar">
+        <div className="left-inner-nav"></div>
         <div className="inner-nav-bar">
         <div className="logo-title">
         <img className="nav-logo" src={window.navLogoURL}/>

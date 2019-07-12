@@ -19,15 +19,17 @@ class BeerIndexItem extends React.Component {
   }
 
   render() {
-
     let beer = this.props.beer
+    if (beer.photoUrl === "") {
+      beer.photoUrl = window.images.genericBeer
+    }
   return (
     <li>
       <div className="index-item">
         <img className="beer-index-pic"src={beer.photoUrl}/>
         <p className="index-name">{beer.name}</p>
         <div className="rating-style">
-        <p className="index-rating">Avg rating: </p>
+        <p className="index-rating">Average Rating: </p>
         <p className="index-style">{ beer.style }</p>
         </div>
         <div className="abv-ibus">
