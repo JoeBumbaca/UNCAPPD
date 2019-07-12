@@ -19,6 +19,7 @@ class EditBeerForm extends React.Component {
 
   componentDidMount() {
     this.props.fetchBeer(this.props.match.params.beerId);
+    window.scrollTo(0, 0);
   }
 
   update(field) {

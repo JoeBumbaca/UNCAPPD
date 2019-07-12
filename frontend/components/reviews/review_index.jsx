@@ -12,6 +12,7 @@ class ReviewIndex extends React.Component {
 
   componentDidMount() {
     this.props.fetchReviews()
+    window.scrollTo(0, 0);
   };
 
   render () {

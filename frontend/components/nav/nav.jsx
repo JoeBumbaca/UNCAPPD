@@ -34,7 +34,7 @@ class NavBar extends React.Component {
             <Link to="/reviews/index" className="navLink">Reviews</Link>
           </li>
           <li className="nav-users">
-              <Link to="/users/index" className="navLink">Users</Link>
+              <Link to="/beers/index" className="navLink">Users</Link>
           </li>
         </ul>
         <div className="user-button">
