@@ -15,7 +15,6 @@ class BeerIndexItem extends React.Component {
     e.preventDefault();
     let beer = this.props.beer
     this.props.deleteBeer(beer)
-    window.location.reload();
   }
 
   render() {
