@@ -66,6 +66,7 @@ class EditBeerForm extends React.Component {
                 onChange={this.update('name')}
                 placeholder="Name"
                 className="create-input"
+                size="35"
               />
             </div>
             <br />
@@ -76,6 +77,7 @@ class EditBeerForm extends React.Component {
                 onChange={this.update('style')}
                 placeholder="Style"
                 className="create-input"
+                size="35"
               />
             </div>
             <br />
@@ -86,6 +88,7 @@ class EditBeerForm extends React.Component {
                 onChange={this.update('abv')}
                 placeholder="ABV"
                 className="create-input"
+                size="35"
               />
             </div>
             <br />
@@ -96,6 +99,7 @@ class EditBeerForm extends React.Component {
                 onChange={this.update('ibus')}
                 placeholder="IBU"
                 className="create-input"
+                size="35"
               />
             </div>
             <br />

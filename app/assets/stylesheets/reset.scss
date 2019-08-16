@@ -24,3 +24,7 @@ input[type="radio"], select, input[type="submit"] {
 h2 + .user_review {
   border-top: 1px solid black;
 }
+
+textarea {
+  resize: none;
+}

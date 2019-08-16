@@ -24,12 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
     store = configureStore();
   }
 
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
-
-  window.fetchReviews = fetchReviews;
-  window.fetchReview = fetchReview;
-
 
 
   const root = document.getElementById("root");

@@ -111,7 +111,7 @@ class SessionForm extends React.Component {
             </label>
               </div>
               <div className="disclaimer">
-                You must be of legal drinking age in your country to join Untappd. 
+                You must be of legal drinking age in your country to join Uncappd. 
                 By clicking Create Account, you agree to our Terms of Use and our Privacy Policy
               </div>
             <br />
