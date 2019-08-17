@@ -25,7 +25,9 @@ class NavBar extends React.Component {
         <div className="inner-nav-bar">
         <div className="logo-title">
         <img className="nav-logo" src={window.navLogoURL}/>
-        <div className="nav-title">UNCAPPD</div>
+        <div className="nav-title">
+              <Link to="/reviews/index" className="navLink">UNCAPPD</Link>
+        </div>
         </div>
         <ul className="nav-links">
           <li className="nav-beers">

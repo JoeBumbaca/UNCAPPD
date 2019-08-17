@@ -56,7 +56,7 @@ class CreateBeerForm extends React.Component {
             <div className="create-form-title">Add a Beer</div>
               {this.renderErrors()}
               <div className="create-name" className="input">
-                <i className="fab fa-untappd"></i>
+                <i className="fab fa-untappd bottles"></i>
               <input type="text"
                 value={this.state.name}
                 onChange={this.update('name')}
@@ -67,7 +67,7 @@ class CreateBeerForm extends React.Component {
               </div>
               <br />
               <div className="create-style" className="input">
-              <i className="fab fa-untappd"></i>
+              <i className="fab fa-untappd bottles"></i>
               < input type="text"
                 value={this.state.style}
                 onChange={this.update('style')}
@@ -78,7 +78,7 @@ class CreateBeerForm extends React.Component {
               </div>
               <br />
               <div className="create-abv" className="input">
-              <i className="fab fa-untappd"></i>
+              <i className="fab fa-untappd bottles"></i>
               < input type="text"
                 value={this.state.abv}
                 onChange={this.update('abv')}
@@ -89,7 +89,7 @@ class CreateBeerForm extends React.Component {
               </div>
               <br />
               <div className="create-ibus" className="input">
-              <i className="fab fa-untappd"></i>
+              <i className="fab fa-untappd bottles"></i>
               < input type="text"
                 value={this.state.ibus}
                 onChange={this.update('ibus')}
