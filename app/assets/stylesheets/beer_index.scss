@@ -4,6 +4,10 @@
   justify-content: center;
 }
 
+.index-main.dark {
+  background-color: grey;
+}
+
 .index-form-main {
   margin-top: 25px;
   width: 60%;
@@ -12,6 +16,10 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+}
+
+.index-form-main.dark {
+  background-color: black;
 }
 
 .index-title {
@@ -25,6 +33,10 @@
   background-color: grey;
   width: 90%;
   margin-bottom: 30px;
+}
+
+.index-div.dark {
+  background-color: black;
 }
 
 .index-item {
@@ -67,6 +79,10 @@
   color: white;
   font-weight: bold;
   margin: 5px;
+}
+
+.index-buttons.dark {
+  background-color: var(--darkyellow);
 }
 
 .index-buttons:hover {

@@ -5,6 +5,10 @@
   justify-content: center;
 }
 
+.create-form-main.dark {
+  background-color: var(--grey);
+}
+
 .create-form {
   margin-top: 25px;
   width: 35%;
@@ -13,6 +17,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.create-form.dark {
+  background-color: black;
 }
 
 .create-beer-button {
@@ -24,6 +32,10 @@
   border-radius: 3px;
   height: 50px;
   background-color: rgb(255, 205, 1);
+}
+
+.create-beer-button.dark {
+  color: black;
 }
 
 .create-beer-button:hover {

@@ -4,6 +4,10 @@
   display: flex;
 }
 
+.nav-bar.dark {
+  background-color: var(--darkyellow);
+}
+
 .left-inner-nav {
   width: 10%;
 }
@@ -57,10 +61,18 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.nav-title.dark {
+  color: black;
+}
+
 .current-user {
   color: white;
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.current-user.dark {
+  color: black;
 }
 
 .nav-reviews {
@@ -70,5 +82,9 @@
 .navLink {
   text-decoration: none;
   color: white;
+}
+
+.navLink.dark {
+  color: black;
 }
 
