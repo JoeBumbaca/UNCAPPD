@@ -115,6 +115,10 @@
   background-color: rgb(255, 205, 1);
 }
 
+.add.dark {
+  background-color: var(--darkyellow);
+}
+
 .add:hover {
   cursor: pointer;
   filter: brightness(85%);
@@ -171,6 +175,10 @@
   color: white;
   font-weight: bold;
   margin: 5px;
+}
+
+.index-review.dark {
+  background-color: var(--darkyellow);
 }
 
 .index-review:hover {
