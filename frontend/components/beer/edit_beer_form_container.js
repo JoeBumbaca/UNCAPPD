@@ -12,7 +12,7 @@ const mapStateToProps = (state, ownProps) => {
     beer = state.entities.beers[id];
   }
   return {
-    beers: beer,
+    beer: beer,
     errors: state.errors.beerErrors,
     formType: 'Edit Beer',
   };

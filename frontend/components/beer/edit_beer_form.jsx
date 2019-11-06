@@ -6,19 +6,27 @@ class EditBeerForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: this.props.beers.id,
-      name: this.props.beers.name,
-      style: this.props.beers.style,
-      abv: this.props.beers.abv,
-      ibus: this.props.beers.ibus,
-      description: this.props.beers.description
+      id: '',
+      name: '',
+      style: '',
+      abv: '',
+      ibus: '',
+      description: ''
     }
     this.handleSubmit = this.handleSubmit.bind(this);
   
   }
 
   componentDidMount() {
-    this.props.fetchBeer(this.props.match.params.beerId);
+    this.props.fetchBeer(this.props.match.params.beerId)
+      .then( () => this.setState({
+        id: this.props.beer.id,
+        name: this.props.beer.name,
+        style: this.props.beer.style,
+        abv: this.props.beer.abv,
+        ibus: this.props.beer.ibus,
+        description: this.props.beer.description 
+      }));
     window.scrollTo(0, 0);
   }
 
@@ -49,8 +57,7 @@ class EditBeerForm extends React.Component {
   }
 
   render() {
-    let beer
-    if(!this.props.beers){
+    if(!this.props.beer){
        return null;
     } else {
     return (
