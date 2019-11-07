@@ -35,6 +35,7 @@ render() {
   return (
     <div>
       <NavContainer />
+      {/* <div className='test'>{window.system}</div> */}
       <div className="index-main">
         <div className="index-form-main">
           <div className="index-form-header">

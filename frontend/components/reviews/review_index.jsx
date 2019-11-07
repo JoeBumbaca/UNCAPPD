@@ -16,7 +16,7 @@ class ReviewIndex extends React.Component {
   };
 
   render () {
-    const reviews = this.props.reviews.map(review => {
+    const reviews = this.props.reviews.reverse().map(review => {
       return (
         <ReviewIndexItem
         key={review.id}
