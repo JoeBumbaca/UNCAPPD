@@ -12,4 +12,8 @@ json.user do
   end
 end
 
-json.photoUrl url_for(review.photo)
+if review.photo.attached?
+    json.photoUrl url_for(review.photo)
+  else 
+    json.photoUrl ""
+  end

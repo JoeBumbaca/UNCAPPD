@@ -6,13 +6,21 @@ class CreateReviewForm extends React.Component {
   constructor(props) {
     super(props);
 
-    let state = {
-      beer: this.props.beer
+    this.state = {
+      beer: this.props.beer,
+      body: '',
+      rating: '3'
     }
 
+    this.setSliderValue = this.setSliderValue.bind(this);
+
+    this.handleReview = this.handleReview.bind(this);
   };
   componentDidMount() {
-    this.props.fetchBeer(this.props.match.params.beerId);
+    this.props.fetchBeer(this.props.match.params.beerId)
+      .then( () => this.setState({
+        beer: this.props.beer
+      }));
     window.scrollTo(0,0);
   }
 
@@ -28,6 +36,31 @@ class CreateReviewForm extends React.Component {
     );
   }
 
+  setSliderValue(e) {
+    this.setState({
+      rating: e.currentTarget.value
+    });
+  }
+
+  updateBody(field) {
+    return e => this.setState({
+      [field]: e.target.value
+    });
+  }
+
+  handleReview(e) {
+    e.preventDefault();
+    const review = Object.assign({}, 
+      {
+        body: this.state.body,
+        rating: this.state.rating,
+        beer_id: this.props.beer.id,
+        reviewer_id: this.props.reviewer.id
+    })
+    this.props.createReview(review)
+      .then( () => this.props.history.push('/reviews/index'));
+  }
+
 
 render() {
   return (
@@ -38,18 +71,25 @@ render() {
         <div className="create-review-title">Write a Review</div>
           {/* {this.renderErrors()} */}
         <div className="review-body"></div>
-        <textarea rows="8" cols="50" className="review" placeholder="What did you think?"></textarea>
+        <textarea rows="8" cols="50" className="review" placeholder="What did you think?" value={this.state.body} onChange={this.updateBody('body')}></textarea>
         <div className="review-rating">
           <div className="review-label">
-          Rating
+              Rating: {this.state.rating}
           </div>
-          <form>
-            <input name="rating" className="review" type="radio" value="1" /> 1 
-            <input name="rating" className="review" type="radio" value="2" /> 2 
-            <input name="rating" className="review" type="radio" value="3" /> 3 
-            <input name="rating" className="review" type="radio" value="4" /> 4 
-            <input name="rating" className="review" type="radio" value="5" /> 5 
-          </form>
+          <input type='range' list='review-score'
+          min='1'
+          max='5'
+          step='1'
+          value={this.state.rating}
+          onChange={this.setSliderValue}
+          />
+            <datalist id="review-score">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </datalist>
         </div>
         <button className="review-submit" onClick={this.handleReview}>Post Review</button>
         </div>

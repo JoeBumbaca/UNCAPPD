@@ -12,13 +12,14 @@ const mapStateToProps = (state, ownProps) => {
     beer = state.entities.beers[id];
   }
   return {
-    beer: beer
+    beer: beer,
+    reviewer: state.entities.users[state.session.currentUser]
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    createReview: id => dispatch(createReview(id)),
+    createReview: review => dispatch(createReview(review)),
     fetchBeer: id => dispatch(fetchBeer(id))
   };
 };

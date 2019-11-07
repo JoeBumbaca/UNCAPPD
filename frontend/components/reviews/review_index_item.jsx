@@ -8,8 +8,10 @@ class ReviewIndexItem extends React.Component {
 
 
   render() {
-
     let review = this.props.review
+    if (review.photoUrl === "") {
+      review.photoUrl = window.images.genericReview
+    }
     return (
       <div>
         <br />
