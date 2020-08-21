@@ -21,13 +21,13 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
-  # has_many :reviews,
-  # foreign_key: :reviewer_id,
-  # class_name: :Review
+  has_many :reviews,
+  foreign_key: :reviewer_id,
+  class_name: :Review
 
-  # has_many :reviewed_beers,
-  # through: :reviews,
-  # source: :beer
+  has_many :reviewed_beers,
+  through: :reviews,
+  source: :beer
 
 
   def self.find_by_credentials(username, password)

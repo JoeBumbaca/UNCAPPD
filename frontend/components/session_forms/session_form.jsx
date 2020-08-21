@@ -119,6 +119,12 @@ class SessionForm extends React.Component {
           </div>
           <br />
             <input className="signup-demo-user" type="submit" onClick={this.handleDemo} value="Demo Log In" />
+            <div className="grey-div"></div>
+            <div className="login-text">Already a member?
+              <span className="login-link">
+                <Link to="/login" className="signup-link">Log in!</Link>
+              </span>
+            </div>
         </form>
       </div>
     </div>
