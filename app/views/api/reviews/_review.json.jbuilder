@@ -13,7 +13,7 @@ json.user do
 end
 
 if review.photo.attached?
-    json.photoUrl url_for(review.photo)
-  else 
-    json.photoUrl ""
-  end
+  json.photoUrl url_for(review.photo)
+else 
+  json.photoUrl ""
+end

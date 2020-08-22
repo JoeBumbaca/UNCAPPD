@@ -1,10 +1,10 @@
-export const create = (review) => (
+export const create = (formData) => (
   $.ajax({
     method: "POST",
     url: "/api/reviews",
-    data: {
-      review
-    }
+    data: formData,
+    contentType: false,
+    processData: false
   })
 );
 
