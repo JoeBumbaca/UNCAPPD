@@ -55,12 +55,12 @@ class CreateReviewForm extends React.Component {
     const file = e.currentTarget.files[0];
 
     reader.onloadend = () =>
-      this.setState({ photoUrl: reader.result, photoFile: file });
+      this.setState({ photoFile: file });
 
     if (file) {
       reader.readAsDataURL(file);
     } else {
-      this.setState({ photoUrl: "", photoFile: null })
+      this.setState({ photoFile: null })
     }
 
     this.setState({ photoFile: e.currentTarget.files[0]});
@@ -75,20 +75,10 @@ class CreateReviewForm extends React.Component {
     formData.append('review[body]', this.state.body);
     formData.append('review[rating]', this.state.rating);
     formData.append('review[photo]', this.state.photoFile);
-    // formData.append('review[reviewer_id]', this.props.reviewer)
 
     this.props.createReview(formData)
       .then(() => this.props.history.push('/reviews/index'));
-    
-    // const review = Object.assign({}, 
-    //   {
-    //     body: this.state.body,
-    //     rating: this.state.rating,
-    //     beer_id: this.props.beer.id,
-    //     reviewer_id: this.props.reviewer.id
-    // })
-    // this.props.createReview(review)
-    //   .then( () => this.props.history.push('/reviews/index'));
+  
   }
 
 

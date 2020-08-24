@@ -10,7 +10,8 @@ class CreateBeerForm extends React.Component {
        style: '',
        abv: '',
        ibus: '',
-       description: ''
+       description: '',
+       photoFile: null
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -25,6 +26,10 @@ class CreateBeerForm extends React.Component {
     return e => this.setState({
       [field]: e.currentTarget.value
     });
+  }
+
+  handleFile(e) {
+
   }
 
   handleSubmit(e) {
@@ -97,6 +102,12 @@ class CreateBeerForm extends React.Component {
                 className="create-input"
                 size="35"
               />
+              </div>
+              <br/>
+              <div className="beer-photo">
+                Upload a picture: <input type="file"
+                onChange={this.handleFile}
+                />
               </div>
               <br />
               <div className="create-description">
