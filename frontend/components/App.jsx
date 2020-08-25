@@ -7,6 +7,7 @@ import CreateBeerFormContainer from './beer/create_beer_form_container';
 import CreateReviewFormContainer from './reviews/create_review_form_container';
 import EditBeerFormContainer from './beer/edit_beer_form_container';
 import ReviewIndexContainer from './reviews/review_index_container';
+import BreweryIndexContainer from './breweries/brewery_index_container';
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Splash from "./Splash";
@@ -16,6 +17,7 @@ const App = () => (
     <Switch>
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
+      <ProtectedRoute path='/breweries' component={BreweryIndexContainer} />
       <ProtectedRoute exact path="/beers/index" component={BeerIndexContainer} />
       <ProtectedRoute exact path="/beers/new" component={CreateBeerFormContainer} />
       <ProtectedRoute path="/beers/edit/:beerId" component={EditBeerFormContainer} />

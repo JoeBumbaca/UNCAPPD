@@ -1,0 +1,22 @@
+.brewery-index-main {
+  height: 100vh;
+  background-color: rgb(246, 242, 232);
+  padding-top: 25px;
+}
+
+.brewery-index-body {
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brewery-index-item {
+  border: 1px solid black;
+  width: 95%;
+  margin: 1% 0;
+  padding: 1%;
+}

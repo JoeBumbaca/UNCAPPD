@@ -1,10 +1,10 @@
-export const create = (beer) => (
+export const create = (formData) => (
   $.ajax({
     method: "POST",
     url: "/api/beers",
-    data: {
-      beer
-    }
+    data: formData,
+    contentType: false,
+    processData: false
   })
 );
 

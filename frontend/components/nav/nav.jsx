@@ -30,13 +30,13 @@ class NavBar extends React.Component {
         </div>
         <ul className="nav-links">
           <li className="nav-beers">
-              <Link to="/beers/index" className="navLink">Beers</Link>
+              <Link to="/breweries" className="navLink">Breweries</Link>
           </li>
           <li className="nav-reviews">
             <Link to="/reviews/index" className="navLink">Reviews</Link>
           </li>
           <li className="nav-users">
-              <Link to="/beers/index" className="navLink">Users</Link>
+              <Link to="/beers/index" className="navLink">Beers</Link>
           </li>
         </ul>
         <div className="user-button">

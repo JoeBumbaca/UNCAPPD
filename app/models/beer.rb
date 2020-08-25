@@ -10,6 +10,7 @@
 #  description :text             not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  brewery_id  :integer          not null
 #
 
 class Beer < ApplicationRecord
@@ -18,6 +19,10 @@ class Beer < ApplicationRecord
   validates :name, uniqueness: true
 
   has_one_attached :photo
+
+  belongs_to :brewery,
+    foreign_key: :brewery_id,
+    class_name: :Brewery
 
   has_many :reviews,
   foreign_key: :beer_id,

@@ -15,6 +15,7 @@ class CreateBeerForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleFile = this.handleFile.bind(this);
 
   }
 
@@ -29,13 +30,34 @@ class CreateBeerForm extends React.Component {
   }
 
   handleFile(e) {
+    const reader = new FileReader();
+    const file = e.currentTarget.files[0];
 
+    reader.onloadend = () =>
+      this.setState({ photoFile: file });
+
+    if (file) {
+      reader.readAsDataURL(file);
+    } else {
+      this.setState({ photoFile: null })
+    }
+
+    this.setState({ photoFile: e.currentTarget.files[0] });
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    const beer = Object.assign({}, this.state);
-    this.props.processForm(beer)
+
+    const formData = new FormData();
+
+    formData.append('beer[name]', this.state.name)
+    formData.append('beer[style]', this.state.style)
+    formData.append('beer[abv]', this.state.abv)
+    formData.append('beer[ibus]', this.state.ibus)
+    formData.append('beer[description]', this.state.description)
+    formData.append('beer[photo]', this.state.photoFile)
+
+    this.props.processForm(formData)
     .then(() => this.props.history.push('/beers/index'));
   }
 
