@@ -1,22 +1,42 @@
 .brewery-index-main {
-  height: 100vh;
+  height: 100%;
   background-color: rgb(246, 242, 232);
   padding-top: 25px;
 }
 
 .brewery-index-body {
-  width: 50%;
+  width: 40%;
   height: 100%;
   background-color: white;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1% 0;
 }
 
 .brewery-index-item {
-  border: 1px solid black;
-  width: 95%;
+  border: 1px solid grey;
+  width: 90%;
   margin: 1% 0;
-  padding: 1%;
+  padding: 1.5%;
+  display: flex;
+  align-items: center;
+}
+
+.brewery-location {
+  color: grey;
+}
+
+.brewery-index-middle {
+  width: 35%;
+  margin-right: 2%;
+}
+
+.brewery-name {
+  font-size: 25px;
+}
+
+.brewery-index-image {
+  width: 30%;
 }

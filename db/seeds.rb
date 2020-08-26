@@ -86,7 +86,10 @@ ActiveRecord::Base.transaction do
   twenty = Review.create(beer_id: oatis.id, reviewer_id: joe.id, rating: 2, body: "You know what this beer needs. . . vanilla.  Nice mouthfeel, creamy texture, but not my cup of tea.  The malt was a little to roasted for my liking.  Needs a touch of sweetness to balance out the biterness this malt imparts.")
   twentyone = Review.create(beer_id: celebration.id, reviewer_id: michelle.id, rating: 3, body: "Not nearly as good as my friends told me that it was.  Still, solid, and you really can taste that the hops are fresh.  I'm more of a pale ale fan, take that over this any day.")
 
-    
+    Brewery.all.each_with_index do |brewery, idx|
+      file = EzDownload.open("https://uncapped-seed.s3-us-west-1.amazonaws.com/breweries/0#{idx+1}-brewery.jpg")
+      brewery.photo.attach(io: file, filename: "0#{idx+1}-brewery.jpg")
+    end
 
     Beer.all.each_with_index do |beer, idx|
         file = EzDownload.open("https://uncapped-seed.s3-us-west-1.amazonaws.com/beer/0#{idx+1}-beer.jpg")

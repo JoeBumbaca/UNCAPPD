@@ -27,7 +27,6 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user)
-    .then(() => this.props.history.push('/beers/index'));
   }
 
   handleDemo(e) {
@@ -37,7 +36,6 @@ class SessionForm extends React.Component {
       password: "hunter12"
     };
     this.props.demoUser(this.state)
-    .then(() => this.props.history.push('/beers/index'));
   }
 
   renderErrors() {

@@ -18,6 +18,10 @@
   flex-direction: column;
   align-items: center;
 }
+textarea[placeholder] {
+  color: red;
+  padding-right: 25px;
+}
 
 .create-form.dark {
   background-color: black;
