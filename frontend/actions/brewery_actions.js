@@ -12,10 +12,10 @@ export const receiveAllBreweries = (breweries) => {
   };
 };
 
-export const receiveBrewery = (brewery) => {
+export const receiveBrewery = (payload) => {
   return {
     type: RECVEIVE_BREWERY,
-    brewery
+    payload
   };
 };
 
@@ -27,6 +27,6 @@ export const fetchAllBreweries = () => (dispatch) => {
 
 export const fetchBrewery = (id) => (dispatch) => {
   return BreweryAPIUtil.fetchSingleBrewery(id)
-    .then(brewery => dispatch(receiveBrewery(brewery)));
+    .then(payload => dispatch(receiveBrewery(payload)));
 };
 

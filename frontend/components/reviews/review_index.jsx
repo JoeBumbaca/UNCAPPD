@@ -30,9 +30,9 @@ class ReviewIndex extends React.Component {
       <div>
         <NavContainer />
         <div className="review-outer-main"> 
-          <div className="reviews-index-title">Reviews</div>
           <ul className="review-innner-outer">
-          { reviews }
+            <div className='reviews-header'>Recent Global Activity</div>
+            { reviews }
           </ul>
         </div>
       </div>

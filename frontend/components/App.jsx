@@ -20,10 +20,10 @@ const App = () => (
       <AuthRoute path="/signup" component={SignupFormContainer} />
       <ProtectedRoute path='/breweries/:breweryId' component={BreweryShowContainer} />
       <ProtectedRoute path='/breweries' component={BreweryIndexContainer} />
-      <ProtectedRoute path="/beers/index" component={BeerIndexContainer} />
+      <ProtectedRoute path="/beers" component={BeerIndexContainer} />
       <ProtectedRoute path="/beers/new" component={CreateBeerFormContainer} />
       <ProtectedRoute path="/beers/edit/:beerId" component={EditBeerFormContainer} />
-      <ProtectedRoute path="/reviews/index" component={ReviewIndexContainer} />
+      <ProtectedRoute path="/the_pub" component={ReviewIndexContainer} />
       <ProtectedRoute path="/reviews/new/:beerId" component={CreateReviewFormContainer} />
       
       <Route exact path="/" component={Splash} />

@@ -1,0 +1,37 @@
+.brewery-show-main {
+  background-color: rgb(246, 242, 232);
+  min-height: 100vh;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brewery-show-beers {
+  background-color: white;
+  width: 60%;
+  padding: 2%;
+}
+
+.brewery-show-info {
+  background-color: white;
+  width: 60%;
+  padding: 2%;
+  margin: 2% 0;
+}
+
+.brewery-show-description {
+  color: grey;
+  width: 90%;
+  margin: auto;
+  padding-top: 1%;
+}
+
+.brewery-show-item {
+  border: 1px solid grey;
+  width: 90%;
+  margin: auto;
+  padding: 1.5%;
+  display: flex;
+  align-items: center;
+}

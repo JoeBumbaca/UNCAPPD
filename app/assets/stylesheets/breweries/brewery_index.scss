@@ -5,7 +5,7 @@
 }
 
 .brewery-index-body {
-  width: 40%;
+  width: 50%;
   height: 100%;
   background-color: white;
   margin: auto;
@@ -39,4 +39,8 @@
 
 .brewery-index-image {
   width: 30%;
+
+  &:hover {
+    cursor: pointer;
+  }
 }

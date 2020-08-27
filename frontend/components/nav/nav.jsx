@@ -25,7 +25,7 @@ class NavBar extends React.Component {
         <div className="logo-title">
         <img className="nav-logo" src={window.navLogoURL}/>
         <div className="nav-title">
-              <Link to="/reviews/index" className="navLink">UNCAPPD</Link>
+              <Link to="/the_pub" className="navLink">UNCAPPD</Link>
         </div>
         </div>
         <ul className="nav-links">
@@ -33,10 +33,10 @@ class NavBar extends React.Component {
               <Link to="/breweries" className="navLink">Breweries</Link>
           </li>
           <li className="nav-reviews">
-            <Link to="/reviews/index" className="navLink">Reviews</Link>
+            <Link to="/the_pub" className="navLink">The Pub</Link>
           </li>
           <li className="nav-users">
-              <Link to="/beers/index" className="navLink">Beers</Link>
+              <Link to="/beers" className="navLink">Beers</Link>
           </li>
         </ul>
         <div className="user-button">
