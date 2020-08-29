@@ -6,9 +6,27 @@ class NavBar extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      dropDown: false
+    }
+
     this.handleLogout = this.handleLogout.bind(this);
+    this.handleDropDownEnter = this.handleDropDownEnter.bind(this);
+    this.handleDropDownLeave = this.handleDropDownLeave.bind(this);
   }
 
+
+  handleDropDownEnter() {
+    this.setState({
+      dropDown: true
+    })
+  }
+
+  handleDropDownLeave() {
+    this.setState({
+      dropDown: false
+    })
+  }
 
   handleLogout(e) { 
     e.preventDefault();
@@ -17,6 +35,7 @@ class NavBar extends React.Component {
   }
 
   render () {
+    const dropDownMenu = this.state.dropDown ? <div className='nav-dropdown' onMouseLeave={this.handleDropDownLeave}>Hello</div> : null
     if (this.props.currentUser) {
     return (
       <div className="nav-bar">
@@ -40,10 +59,11 @@ class NavBar extends React.Component {
           </li>
         </ul>
         <div className="user-button">
-        <div className="current-user">{this.props.currentUser.username}</div>
+          <div className="current-user" onMouseEnter={this.handleDropDownEnter} onMouseLeave={this.handleDropDownLeave}>{this.props.currentUser.username} </div>
           <button className="nav-logout" onClick={this.handleLogout}>Logout</button>
         </div>
         </div>
+        {dropDownMenu}
       </div>
     )
     } else {

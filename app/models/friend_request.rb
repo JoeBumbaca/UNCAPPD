@@ -9,4 +9,5 @@
 #  updated_at   :datetime         not null
 #
 class FriendRequest < ApplicationRecord
+  validates :requester_id, :requestee_id, presence: true
 end

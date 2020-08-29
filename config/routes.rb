@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     resources :beers
     resource :session, only: [:create, :destroy]
     resources :reviews, only: [:create, :index, :show]
+    resources :friend_requests, only: [:create, :destroy]
+    resources :friendships, only: [:create, :destroy]
   end
 
   root to:"static_pages#root"

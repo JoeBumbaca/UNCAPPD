@@ -9,6 +9,7 @@ import EditBeerFormContainer from './beer/edit_beer_form_container';
 import ReviewIndexContainer from './reviews/review_index_container';
 import BreweryIndexContainer from './breweries/brewery_index_container';
 import BreweryShowContainer from './breweries/brewery_show_container';
+import UserProfileContainer from './user/user_profile_container';
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Splash from "./Splash";
@@ -25,7 +26,7 @@ const App = () => (
       <ProtectedRoute path="/beers/edit/:beerId" component={EditBeerFormContainer} />
       <ProtectedRoute path="/the_pub" component={ReviewIndexContainer} />
       <ProtectedRoute path="/reviews/new/:beerId" component={CreateReviewFormContainer} />
-      
+      <ProtectedRoute path='/users/:userId' component={UserProfileContainer}/>
       <Route exact path="/" component={Splash} />
     </Switch>
   </div>
