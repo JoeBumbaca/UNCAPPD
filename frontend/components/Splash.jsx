@@ -8,14 +8,19 @@ const Splash = () => (
   </header>
 
   <div className="main">
-    <div className="main-left">
-      <div className="yellow-div">
+    <div className='main-top'>
+      <div className="main-left">
+        <div className="yellow-div">
+        </div>
+        <div className="splash-text">
+            Share your love of Beer with millions of your closest friends.
+        </div>
       </div>
-      <div className="splash-text">
-          Share your love of Beer with millions of your closest friends.
+      <div className="main-right">
       </div>
     </div>
-    <div className="main-right">
+    <div className='main-bottom'>
+      
     </div>
   </div>
 </div>
