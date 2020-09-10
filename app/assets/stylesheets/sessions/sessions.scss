@@ -57,8 +57,6 @@
   color: black;
 }
 
-
-
 header {
     position: fixed;
     top: 0;
@@ -66,24 +64,49 @@ header {
     right: 0;
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  width: 100vw;
-  justify-content: center;
-  background-image: linear-gradient(rgba(0,0,0, .75), rgba(0,0,0, .75)), image-url("beer.jpg");
-  background-size: cover;
-}
+// .main {
+//   display: flex;
+//   flex-direction: column;
+//   min-height: 100vh;
+//   width: 100vw;
+//   justify-content: center;
+//   background-image: linear-gradient(rgba(0,0,0, .75), rgba(0,0,0, .75)), image-url("beer.jpg");
+//   background-size: cover;
+// }
 
 .main-top {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  height: 80%;
+  background-image: linear-gradient(rgba(0,0,0, .75), rgba(0,0,0, .75)), image-url("beer.jpg");
+  background-size: cover;
+  min-height: 70vh;
+  margin-bottom: 2%;
+}
+
+.main-mid {
+  display: flex;
+  justify-content: center;
 }
 
 .main-bottom {
   display: flex;
+  flex-direction: column;
+}
+
+.bottom-images {
+  margin: 0 1% 0 1%;
+  display: flex;
+  justify-content: space-evenly;
+
+  &-header {
+    font-size: x-large;
+    font-weight: 900;
+  }
+
+  &-text {
+    font-size: large;
+  }
 }
 
 .main-left {
@@ -91,6 +114,7 @@ header {
   height: 300px;
   background-repeat: no-repeat;
   margin-top: 225px;
+  margin-right: 5%;
   background-image: image-url("uncappd_new.png");
   background-position: top;
   display: flex;
@@ -102,7 +126,22 @@ header {
   background-size: contain;
   background-repeat: no-repeat;
   width: 500px;
-  height: 698px;
+  height: 600px;
   margin-top: 180px;
   background-image: image-url(("phones.png"));
+}
+
+.footer {
+  background-color: black;
+  height: 88px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.fa-github,
+.fa-linkedin,
+.fa-angellist,
+.fa-gem {
+  color: white;
 }
