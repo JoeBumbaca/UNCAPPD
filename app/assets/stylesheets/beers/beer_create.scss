@@ -19,7 +19,6 @@
   align-items: center;
 }
 textarea[placeholder] {
-  color: red;
   padding-right: 25px;
 }
 
@@ -69,8 +68,14 @@ input[type="text"] {
 
 textarea {
     font-size:15px;
+    width: 90%;
 }
 
-.bottles {
+.bottles,
+.fa-warehouse {
   color: gray;
 }
+
+// .create-brewery {
+//   margin-bottom: 300px;
+// }

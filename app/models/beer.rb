@@ -28,4 +28,15 @@ class Beer < ApplicationRecord
   foreign_key: :beer_id,
   class_name: :Review
 
+  def beer_rating 
+    review_score = 0
+    review_count = 0
+    reviews = self.reviews
+    reviews.each do |review|
+      review_count += 1
+      review_score += review.rating
+    end
+    review_score / (review_count * 1.0)
+  end
+
 end

@@ -1,12 +1,14 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import { createBeer, removeErrors } from '../../actions/beer_actions';
+import { fetchBrewery } from '../../actions/brewery_actions';
 import CreateBeerForm from './create_beer_form';
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, ownProps) => {
   return {
     errors: state.errors.beerErrors,
-    formType: 'Create Beer'
+    formType: 'Create Beer',
+    brewery: state.entities.breweries[ownProps.match.params.breweryId]
   };
 };
 
@@ -14,7 +16,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     processForm: (beer) => dispatch(createBeer(beer)),
-    clearErrors: () => dispatch(removeErrors())
+    clearErrors: () => dispatch(removeErrors()),
+    fetchBrewery: (id) => dispatch(fetchBrewery(id))
   };
 };
 

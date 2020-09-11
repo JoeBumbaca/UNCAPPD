@@ -19,11 +19,11 @@ const App = () => (
     <Switch>
       <AuthRoute path="/login" component={LoginFormContainer} />
       <AuthRoute path="/signup" component={SignupFormContainer} />
+      <ProtectedRoute path="/breweries/:breweryId/beers/new" component={CreateBeerFormContainer} />
       <ProtectedRoute path='/breweries/:breweryId' component={BreweryShowContainer} />
       <ProtectedRoute path='/breweries' component={BreweryIndexContainer} />
-      <ProtectedRoute path="/beers" component={BeerIndexContainer} />
-      <ProtectedRoute path="/beers/new" component={CreateBeerFormContainer} />
       <ProtectedRoute path="/beers/edit/:beerId" component={EditBeerFormContainer} />
+      <ProtectedRoute path="/beers" component={BeerIndexContainer} />
       <ProtectedRoute path="/the_pub" component={ReviewIndexContainer} />
       <ProtectedRoute path="/reviews/new/:beerId" component={CreateReviewFormContainer} />
       <ProtectedRoute path='/users/:userId' component={UserProfileContainer}/>

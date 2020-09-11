@@ -9,7 +9,7 @@ class CreateReviewForm extends React.Component {
     this.state = {
       beer: this.props.beer,
       body: '',
-      rating: '3',
+      rating: '3.5',
       photoFile: null,
     }
 
@@ -77,50 +77,62 @@ class CreateReviewForm extends React.Component {
     formData.append('review[photo]', this.state.photoFile);
 
     this.props.createReview(formData)
-      .then(() => this.props.history.push('/reviews/index'));
+      .then(() => this.props.history.push('/the_pub'));
   
   }
 
 
 render() {
-  return (
-     <div>
-       <NavContainer /> 
-       <div className="review-main">
-        <div className="review-form-main">
-        <div className="create-review-title">Write a Review</div>
-          {/* {this.renderErrors()} */}
-        <div className="review-body"></div>
-        <textarea rows="8" cols="50" className="review" placeholder="What did you think?" value={this.state.body} onChange={this.updateBody('body')}></textarea>
-        <div className='review-picture'>
-          Upload a picture: <input type="file"
-          onChange={this.handleFile}
-          />
-        </div>
-        <div className="review-rating">
-          <div className="review-label">
-              Rating: {this.state.rating}
+  if (!this.props.beer) {
+    return null;
+  } else {
+    return (
+      <div>
+        <NavContainer />
+        <div className='review-main'>
+          <div className='review-form-main'>
+            <div className='create-review-title'>Write a Review for</div>
+            <div className='create-review-beer'>{this.props.beer.name}</div>
+            {/* {this.renderErrors()} */}
+            <div className='review-body'></div>
+            <textarea
+              rows='8'
+              cols='50'
+              className='review'
+              placeholder='What did you think?'
+              value={this.state.body}
+              onChange={this.updateBody('body')}
+            ></textarea>
+            <div className='review-picture'>
+              Upload a picture: <input type='file' onChange={this.handleFile} />
+            </div>
+            <div className='review-rating'>
+              <div className='review-label'>Rating: {this.state.rating}</div>
+              <input
+                type='range'
+                list='review-score'
+                min='1'
+                max='5'
+                step='.5'
+                value={this.state.rating}
+                onChange={this.setSliderValue}
+              />
+              <datalist id='review-score'>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </datalist>
+            </div>
+            <button className='review-submit' onClick={this.handleReview}>
+              Post Review
+            </button>
           </div>
-          <input type='range' list='review-score'
-          min='1'
-          max='5'
-          step='1'
-          value={this.state.rating}
-          onChange={this.setSliderValue}
-          />
-            <datalist id="review-score">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </datalist>
         </div>
-        <button className="review-submit" onClick={this.handleReview}>Post Review</button>
-        </div>
-       </div>
-     </div>
-  )
+      </div>
+    );
+  }
 }
 
 

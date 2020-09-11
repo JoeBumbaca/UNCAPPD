@@ -19,6 +19,10 @@ class CreateBeerForm extends React.Component {
 
   }
 
+  componentDidMount() {
+    this.props.fetchBrewery(this.props.match.params.breweryId)
+  }
+
   componentWillMount() {
     this.props.clearErrors();
   }
@@ -50,6 +54,7 @@ class CreateBeerForm extends React.Component {
 
     const formData = new FormData();
 
+    formData.append('beer[brewery_id]', this.props.brewery.id)
     formData.append('beer[name]', this.state.name)
     formData.append('beer[style]', this.state.style)
     formData.append('beer[abv]', this.state.abv)
@@ -58,7 +63,7 @@ class CreateBeerForm extends React.Component {
     formData.append('beer[photo]', this.state.photoFile)
 
     this.props.processForm(formData)
-    .then(() => this.props.history.push('/beers/index'));
+    .then(() => this.props.history.push(`/breweries/${this.props.brewery.id}`));
   }
 
 
@@ -75,79 +80,102 @@ class CreateBeerForm extends React.Component {
   }
 
   render() {
-      return (
-        <div>
-          <NavContainer />
-          <div className="create-form-main">
-            <div className="create-form">
-            <div className="create-form-title">Add a Beer</div>
-              {this.renderErrors()}
-              <div className="create-name" className="input">
-                <i className="fab fa-untappd bottles"></i>
-              <input type="text"
-                value={this.state.name}
-                onChange={this.update('name')}
-                placeholder="Beer Name"
-                className="create-input"
-                size="35"
-              />
-              </div>
-              <br />
-              <div className="create-style" className="input">
-              <i className="fab fa-untappd bottles"></i>
-              < input type="text"
-                value={this.state.style}
-                onChange={this.update('style')}
-                placeholder="Style"
-                className="create-input"
-                size="35"
-              />
-              </div>
-              <br />
-              <div className="create-abv" className="input">
-              <i className="fab fa-untappd bottles"></i>
-              < input type="text"
-                value={this.state.abv}
-                onChange={this.update('abv')}
-                placeholder="ABV"
-                className="create-input"
-                size="35"
-              />
-              </div>
-              <br />
-              <div className="create-ibus" className="input">
-              <i className="fab fa-untappd bottles"></i>
-              < input type="text"
-                value={this.state.ibus}
-                onChange={this.update('ibus')}
-                placeholder="IBU"
-                className="create-input"
-                size="35"
-              />
-              </div>
-              <br/>
-              <div className="beer-photo">
-                Upload a picture: <input type="file"
-                onChange={this.handleFile}
+      if (!this.props.brewery) {
+        return null;
+      } else {
+        return (
+          <div>
+            <NavContainer />
+            <div className='create-form-main'>
+              <div className='create-form'>
+                <div className='create-form-title'>Add a Beer</div>
+                {this.renderErrors()}
+                <div className='create-brewery' className='input'>
+                  <i className='fas fa-warehouse'></i>
+                  <input
+                    type='text'
+                    defaultValue={this.props.brewery.name}
+                    className='create-input'
+                    size='35'
+                    readOnly
+                  />
+                </div>
+                <br/>
+                <div className='create-name' className='input'>
+                  <i className='fab fa-untappd bottles'></i>
+                  <input
+                    type='text'
+                    value={this.state.name}
+                    onChange={this.update('name')}
+                    placeholder='Beer Name'
+                    className='create-input'
+                    size='35'
+                  />
+                </div>
+                <br/>
+                <div className='create-style' className='input'>
+                  <i className='fab fa-untappd bottles'></i>
+                  <input
+                    type='text'
+                    value={this.state.style}
+                    onChange={this.update('style')}
+                    placeholder='Style'
+                    className='create-input'
+                    size='35'
+                  />
+                </div>
+                <br />
+                <div className='create-abv' className='input'>
+                  <i className='fab fa-untappd bottles'></i>
+                  <input
+                    type='text'
+                    value={this.state.abv}
+                    onChange={this.update('abv')}
+                    placeholder='ABV'
+                    className='create-input'
+                    size='35'
+                  />
+                </div>
+                <br />
+                <div className='create-ibus' className='input'>
+                  <i className='fab fa-untappd bottles'></i>
+                  <input
+                    type='text'
+                    value={this.state.ibus}
+                    onChange={this.update('ibus')}
+                    placeholder='IBU'
+                    className='create-input'
+                    size='35'
+                  />
+                </div>
+                <br />
+                <div className='beer-photo'>
+                  Upload a picture:{' '}
+                  <input type='file' onChange={this.handleFile} />
+                </div>
+                <br />
+                <div className='create-description'>
+                  <textarea
+                    value={this.state.description}
+                    onChange={this.update('description')}
+                    placeholder='Description'
+                    className='create-input'
+                    rows='8'
+                    cols='50'
+                  ></textarea>
+                </div>
+                <br />
+                <input
+                  className='create-beer-button'
+                  type='submit'
+                  onClick={this.handleSubmit}
+                  value='Add The Beer!'
                 />
               </div>
-              <br />
-              <div className="create-description">
-              < textarea
-                value={this.state.description}
-                onChange={this.update('description')}
-                placeholder="Description"
-                className="create-input"
-                rows="8"
-                cols="50"
-              ></ textarea>
-              </div>
-              <br />
-            <input className="create-beer-button" type="submit" onClick={this.handleSubmit} value="Add The Beer!" />
             </div>
           </div>
-        </div>
-      )
+        );
+      }
   }
 
 };
