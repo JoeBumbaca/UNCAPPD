@@ -11,8 +11,13 @@ class Api::ReviewsController < ApplicationController
   end
 
 
-  def index 
-    @reviews = Review.all
+  def index
+    if params[:user]
+      @reviews = Review.where(reviewer_id: params[:user])
+    else
+      @reviews = Review.all
+    end
+
     render :index
   end
 

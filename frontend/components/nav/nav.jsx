@@ -22,6 +22,14 @@ class NavBar extends React.Component {
   render () {
     
     if (this.props.currentUser) {
+      const dropdown = (
+        <ul id='user-dropdown'>
+          <Link to={`/users/${this.props.currentUser.id}`}>
+            <li>My Profile</li>
+          </Link>
+          <li onClick={this.handleLogout}>Logout</li>
+        </ul>
+      );
     return (
       <div className='nav-bar'>
         <div className='left-inner-nav'></div>
@@ -55,10 +63,8 @@ class NavBar extends React.Component {
             <div className='current-user'>
               <i className='fas fa-user-circle fa-2x'></i>
               {this.props.currentUser.username}
+              {dropdown}
             </div>
-            <button className='nav-logout' onClick={this.handleLogout}>
-              Logout
-            </button>
           </div>
         </div>
       </div>

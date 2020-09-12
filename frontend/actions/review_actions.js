@@ -27,15 +27,20 @@ export const removeErrors = () => ({
 
 export const fetchReviews = () => dispatch => (
   APIUtil.fetchReviews()
-  .then( reviews => dispatch(receiveReviews(reviews)))
+    .then( reviews => dispatch(receiveReviews(reviews)))
 );
+
+export const fetchUserReviews = (id) => dispatch => (
+  APIUtil.fetchUserReviews(id)
+    .then( reviews => dispatch(receiveReviews(reviews)))
+)
 
 export const fetchReview = id => dispatch => (
   APIUtil.fetchReview(id)
-  .then( review => dispatch(receiveReview(review)))
+    .then( review => dispatch(receiveReview(review)))
 );
 
 export const createReview = formReview => dispatch => (
   APIUtil.create(formReview)
-  .then( review => dispatch(receiveReview(review)))
+    .then( review => dispatch(receiveReview(review)))
 );

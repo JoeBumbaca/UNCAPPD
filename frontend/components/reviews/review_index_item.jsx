@@ -13,7 +13,7 @@ class ReviewIndexItem extends React.Component {
       review.photoUrl = window.images.genericReview
     }
     return (
-      <div>
+      <div className='review-outer'>
         <br />
         <li className='review-inner-main'>
           <div className='indv-review-header'>

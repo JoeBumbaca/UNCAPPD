@@ -11,9 +11,19 @@ export const create = (formData) => (
 export const fetchReviews = () => (
   $.ajax({
     method: "GET",
-    url: "/api/reviews",
+    url: "/api/reviews"
   })
 );
+
+export const fetchUserReviews = (id) => (
+  $.ajax({
+    method: "GET",
+    url: "/api/reviews",
+    data: {user: id}
+  })
+);
+
+
 
 
 export const fetchReview = (id) => (

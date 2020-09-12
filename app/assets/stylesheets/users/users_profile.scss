@@ -1,0 +1,35 @@
+.user-profile-main {
+  min-height: 100vh;
+  background-color:rgb(246, 242, 232);
+  display: flex;
+  flex-direction: column;
+}
+
+.user-profile-reviews {
+  width: 60%;
+  margin-left: 10%;
+
+  &-title {
+    background-color: white;
+    font-size: larger;
+    font-weight: 900;
+    width: 19%;
+    margin: 5% 30% 0 ;
+  }
+}
+
+.cover-photo-container {
+  height: 350px;
+  width: 70%;
+  background-image: image-url("cover.jpg");
+  margin: 0 auto;
+  background-size: cover;
+  color: white;
+  font-size: xx-large;
+  font-weight: 700;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 2%;
+}
+
