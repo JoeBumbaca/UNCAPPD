@@ -27,10 +27,14 @@ class UserProfile extends React.Component {
               <p>{user.username}</p>
               <p>Number of Reviews: {user.review_ids.length}</p>
             </section>
-            <ul className='user-profile-reviews'>
-              <p className='user-profile-reviews-title'>Your Recent Activity</p>
-              {reviews}
-            </ul>
+            <section className='user-profile-body'>
+              <ul className='user-profile-reviews'>
+                {reviews}
+              </ul>
+              <article className='user-friends'>
+                <p>Your Friends</p>
+              </article>
+            </section>
           </section>
         </>
       );

@@ -33,3 +33,22 @@
   padding: 0 2%;
 }
 
+.user-profile-body {
+  display: flex;
+}
+
+.user-friends {
+  width: 25%;
+  height: 100%;
+  background-color: white;
+  margin-top: 1.5%;
+  margin-right: 10%;
+  border: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: large;
+  font-weight: 400;
+  text-decoration: underline;
+}
+

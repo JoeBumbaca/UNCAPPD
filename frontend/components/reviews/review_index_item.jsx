@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import StarCounter from './star_count';
 
 class ReviewIndexItem extends React.Component {
@@ -18,7 +19,7 @@ class ReviewIndexItem extends React.Component {
         <li className='review-inner-main'>
           <div className='indv-review-header'>
             <div className='indv-review-name'>
-              {review.user[review.reviewer_id].username}
+              <Link to={`/users/${review.user[review.reviewer_id].id}`}>{review.user[review.reviewer_id].username}</Link>
             </div>
             <div> is drinking a </div>
             <div className='indv-review-beer'>
