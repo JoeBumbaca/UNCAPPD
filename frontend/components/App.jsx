@@ -10,7 +10,6 @@ import ReviewIndexContainer from './reviews/review_index_container';
 import BreweryIndexContainer from './breweries/brewery_index_container';
 import BreweryShowContainer from './breweries/brewery_show_container';
 import UserProfileContainer from './user/user_profile_container';
-
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Splash from "./Splash";
 
