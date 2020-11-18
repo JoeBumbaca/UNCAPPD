@@ -44,9 +44,9 @@ const Splash = () => (
         <a href='https://angel.co/u/joe-bumbaca'>
           <i className='fab fa-angellist fa-4x'></i>
         </a>
-        <a href='https://joebumbaca.com/'>
+        {/* <a href='https://joebumbaca.com/'>
           <i className='fas fa-gem fa-4x'></i>
-        </a>
+        </a> */}
       </section>
     </section>
   </>
