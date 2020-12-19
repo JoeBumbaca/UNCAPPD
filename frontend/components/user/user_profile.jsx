@@ -8,14 +8,21 @@ class UserProfile extends React.Component {
   };
 
   componentDidMount() {
-    this.props.fetchUserReviews(this.props.currentUser.id)
+    this.props.fetchUserReviews(this.props.userId);
+    this.props.fetchUser(this.props.match.params.userId)
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.userId !== this.props.userId) {
+      this.props.fetchUserReviews(this.props.userId);
+    }
   }
 
   render() {
-    if (!this.props.reviews) {
+    if (!this.props.reviews || !this.props.user) {
       return null;
     } else {
-      const user = this.props.currentUser;
+      const user = this.props.user;
       const reviews = this.props.reviews.map(review => {
         return <ReviewIndexItem key={review.id} review={review}/>
       })
@@ -32,7 +39,7 @@ class UserProfile extends React.Component {
                 {reviews}
               </ul>
               <article className='user-friends'>
-                <p>Your Friends</p>
+                <p>{user.username}'s Friends</p>
               </article>
             </section>
           </section>
