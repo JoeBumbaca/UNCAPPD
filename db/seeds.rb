@@ -55,6 +55,7 @@ ActiveRecord::Base.transaction do
   freshsqueezed= Beer.create(name: "Fresh Squeezed", style: "IPA", abv: 6.4, ibus: 60, description: "Bond Street Series- this mouthwatering lay delicious IPA gets its flavor from a heavy helping of citra and mosaic hops. Don't worry, no fruit was harmed in the making of this beer.", brewery_id: deschutes.id)
   blindpig= Beer.create(name: "Blind Pig", style: "IPA", abv: 6.1, ibus: 70, description: "Full-bodied, very hoppy, with citrus, pine, fruity notes and a nice dry, bitter finish!", brewery_id: russianRiver.id)
   rasputin= Beer.create(name: "North Coast Old Rasputin", style: "Russian Imperial Stout", abv: 9.0, ibus: 75, description: "It’s a rich, intense brew with big complex flavors and a warming finish.", brewery_id: northCoast.id)
+  aroma = Beer.create(name: 'Aroma Coma', style: "IPA", abv: 8, ibus: 75, description: "Aroma Coma IPA delivers a citrus hop assault that lives up to its name. We start with just a few handfuls of rye and caramel malt, then we dry hop it twice with a massive amount of Citra hops for an incredible aromatic experience. Keep cold, drink fresh, and inhale aggressively.", brewery_id: drake.id)
 
   joe = User.create(username: "JoeyBoom", password: "hunter123", email: "jboom@gmail.com")
   nico = User.create(username: "nico2017", password: "password", email: "cute1@gmail.com")
@@ -85,6 +86,9 @@ ActiveRecord::Base.transaction do
   nineteen = Review.create(beer_id: coors.id, reviewer_id: dave.id, rating: 2, body: "What is there to say about the American Light Lager?  Not much, enjoy it with friends, on a hot day.  Make sure the mountains are blue!  Crushing the can might be the most enjoyable part of drinking this beer.")
   twenty = Review.create(beer_id: oatis.id, reviewer_id: joe.id, rating: 2, body: "You know what this beer needs. . . vanilla.  Nice mouthfeel, creamy texture, but not my cup of tea.  The malt was a little to roasted for my liking.  Needs a touch of sweetness to balance out the biterness this malt imparts.")
   twentyone = Review.create(beer_id: celebration.id, reviewer_id: michelle.id, rating: 3, body: "Not nearly as good as my friends told me that it was.  Still, solid, and you really can taste that the hops are fresh.  I'm more of a pale ale fan, take that over this any day.")
+  twentytwo = Review.create(beer_id: denogg.id, reviewer_id: demo.id, rating: 5, body: "I LOVE this beer. It's heavy but not unapproachable. It is great for sipping and savoring. . . too much too fast is a recipe for disaster!! Be warned!")
+  twentythree = Review.create(beer_id: aroma.id, reviewer_id: demo.id, rating: 4, body: "So good, this should be a flagship beer by Drakes. I'm only giving this a 4.5 because I hate giving out 5s.")
+
 
     Brewery.all.each_with_index do |brewery, idx|
       file = EzDownload.open("https://uncapped-seed.s3-us-west-1.amazonaws.com/breweries/0#{idx+1}-brewery.jpg")

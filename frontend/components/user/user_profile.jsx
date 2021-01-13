@@ -10,6 +10,7 @@ class UserProfile extends React.Component {
   componentDidMount() {
     this.props.fetchUserReviews(this.props.userId);
     this.props.fetchUser(this.props.match.params.userId)
+    window.scrollTo(0,0);
   }
 
   componentDidUpdate(prevProps) {
@@ -31,8 +32,8 @@ class UserProfile extends React.Component {
           <NavContainer />
           <section className='user-profile-main'>
             <section className='cover-photo-container'>
-              <p>{user.username}</p>
-              <p>Number of Reviews: {user.review_ids.length}</p>
+              <p className='user-profile-info'>{user.username}</p>
+              <p className='user-profile-info'>Number of Reviews: {user.review_ids.length}</p>
             </section>
             <section className='user-profile-body'>
               <ul className='user-profile-reviews'>
