@@ -43,8 +43,8 @@ class BreweryShow extends React.Component {
                 </li>
               </section>
               <section>
-                <li>Num. Reviews</li>
-                <li>Avg Review Score</li>
+                <li>Num. Reviews: {brewery.num_reviews}</li>
+                <li>Avg Review Score: {brewery.rev_average}</li>
               </section>
             </ul>
             <section className='brewery-show-description'>

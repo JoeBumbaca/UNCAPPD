@@ -14,8 +14,8 @@ const breweryIndexItem = ({brewery}) => {
           <li className='brewery-location'>{brewery.city}, {brewery.state} {brewery.country}</li>
         </section>
         <section>
-          <li>Num. Reviews</li>
-          <li>Avg Review Score</li>
+          <li>Num. Reviews: {brewery.num_reviews}</li>
+          <li>Avg Review Score: {brewery.rev_average}</li>
         </section>
       </ul>
   )

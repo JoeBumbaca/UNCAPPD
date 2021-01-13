@@ -20,5 +20,22 @@ class Brewery < ApplicationRecord
   has_many :beers,
     foreign_key: :brewery_id,
     class_name: :Beer
+
+  def num_reviews
+    Review.where(beer_id: self.beers).length
+  end
+
+  def review_average
+    reviews = Review.where(beer_id: self.beers)
+    if reviews.length == 0
+      return 'N/A'
+    end
+    total = 0;
+    reviews.each do |review|
+      total += review.rating 
+    end
+
+    (total / (reviews.length * 1.0)).round(2)
+  end
   
 end
