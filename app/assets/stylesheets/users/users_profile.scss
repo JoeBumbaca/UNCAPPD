@@ -3,6 +3,8 @@
   background-color:rgb(246, 242, 232);
   display: flex;
   flex-direction: column;
+  align-items: center;
+  // justify-content: center;
 }
 
 .user-profile-reviews {
@@ -18,10 +20,25 @@
   }
 }
 
-.user-profile-info {
+.user-profile-info, .fa-user-plus {
   background-color: rgba(197, 194, 194, .35);
   border-radius: 10px;
-  padding: 0 .5%;
+  padding: 0 .95%;
+}
+
+.fa-user-plus {
+  padding: 2.5%;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.user-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 25%;
 }
 
 .cover-photo-container {
@@ -41,6 +58,9 @@
 
 .user-profile-body {
   display: flex;
+  width: 100%;
+  // align-items: center;
+  justify-content: center;
 }
 
 .user-friends {

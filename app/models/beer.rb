@@ -36,7 +36,7 @@ class Beer < ApplicationRecord
       review_count += 1
       review_score += review.rating
     end
-    review_score / (review_count * 1.0)
+    (review_score / (review_count * 1.0)).round(2)
   end
 
 end

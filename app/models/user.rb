@@ -29,6 +29,13 @@ class User < ApplicationRecord
   through: :reviews,
   source: :beer
 
+  has_many :friend_requests,
+    foreign_key: :requestee_id,
+    class_name: :FriendRequest
+
+  has_many :requested_friends,
+    foreign_key: :requester_id,
+    class_name: :FriendRequest
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)

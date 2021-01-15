@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import UserProfile from './user_profile';
 import { fetchUserReviews } from '../../actions/review_actions';
 import { fetchUser } from '../../actions/session_actions';
+import { createFriendRequest } from '../../actions/friend_request_actions';
 
 
 const MSP = (state, ownProps) => {
@@ -12,6 +13,7 @@ const MSP = (state, ownProps) => {
     user = null;
   }
   return {
+    currentUserId: state.session.currentUser,
     user: user,
     userId: ownProps.match.params.userId,
     reviews: Object.values(state.entities.reviews)
@@ -21,7 +23,8 @@ const MSP = (state, ownProps) => {
 const MDP = dispatch => {
   return {
     fetchUserReviews: (id) => dispatch(fetchUserReviews(id)),
-    fetchUser: (userId) => dispatch(fetchUser(userId))
+    fetchUser: (userId) => dispatch(fetchUser(userId)),
+    createFriendRequest: (request) => dispatch(createFriendRequest(request))
   }
 };
 
