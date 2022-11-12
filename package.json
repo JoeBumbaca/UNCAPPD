@@ -40,7 +40,7 @@
   },
   "homepage": "https://github.com/JoeBumbaca/UNCAPPD#readme",
   "devDependencies": {
-    "webpack-cli": "^3.3.5"
+    "webpack-cli": "^3.3.12"
   },
   "engines": {
     "node": "12.12.0",
